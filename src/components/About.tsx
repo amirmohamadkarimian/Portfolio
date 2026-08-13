@@ -9,6 +9,9 @@ export const About: React.FC = () => {
         <div className="about-grid">
           {/* Left Column: Service & Specialty Cards Stack */}
           <div className="about-cards-col">
+            {/* Parent heading for the service cards below — keeps the document
+                outline sequential (h1 → h2 → h3) without skipping levels. */}
+            <h2 className="sr-only">Services & Specialties</h2>
             {SERVICES_DATA.map((service, i) => (
               <Reveal key={service.id} className="reveal-left" delay={i * 100}>
                 <div className="service-card">

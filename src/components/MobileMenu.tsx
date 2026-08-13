@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -16,18 +16,65 @@ const MOBILE_NAV_LINKS = [
 ];
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, activeSection, onClose }) => {
-  // Lock body scroll when mobile menu is open
+  const menuRef = useRef<HTMLDivElement>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+  const wasOpenRef = useRef(false);
+
+  // Lock body scroll and manage focus while the mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      // Move focus into the drawer so keyboard users land on the first control
+      closeBtnRef.current?.focus();
     } else {
       document.body.style.overflow = '';
+      // Return focus to the hamburger button that opened the menu
+      if (wasOpenRef.current) {
+        const openBtn = document.getElementById('open-menu-btn');
+        openBtn?.focus();
+      }
     }
+
+    wasOpenRef.current = isOpen;
 
     return () => {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
+
+  // Close on Escape and trap Tab focus within the open drawer
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        onClose();
+        return;
+      }
+
+      if (e.key === 'Tab' && menuRef.current) {
+        const focusable = menuRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled])'
+        );
+        if (focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [isOpen, onClose]);
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
@@ -49,6 +96,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, activeSection, o
           </a>
           <button
             id="close-menu-btn"
+            ref={closeBtnRef}
             className="close-menu-btn"
             aria-label="Close Navigation Menu"
             onClick={onClose}
