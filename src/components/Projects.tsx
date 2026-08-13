@@ -6,7 +6,6 @@ export const Projects: React.FC = () => {
   const trackRef = useRef<HTMLDivElement>(null);
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState(false);
-  const [progressWidth, setProgressWidth] = useState(25);
 
   const cardWidth = 440; // Card width + gap
 
@@ -19,19 +18,6 @@ export const Projects: React.FC = () => {
 
     setPrevDisabled(currentScroll <= 10);
     setNextDisabled(currentScroll >= maxScroll - 10);
-
-    if (maxScroll > 0) {
-      const percentage = Math.min(
-        100,
-        Math.max(
-          25,
-          ((currentScroll + sliderTrack.clientWidth) /
-            sliderTrack.scrollWidth) *
-            100,
-        ),
-      );
-      setProgressWidth(percentage);
-    }
   };
 
   useEffect(() => {
@@ -299,17 +285,6 @@ export const Projects: React.FC = () => {
               </article>
             ))}
           </div>
-        </div>
-        </Reveal>
-
-        {/* Slider Progress Bar */}
-        <Reveal delay={250}>
-        <div className="slider-pagination-bar">
-          <div
-            id="slider-progress"
-            className="slider-progress-fill"
-            style={{ width: `${progressWidth}%` }}
-          ></div>
         </div>
         </Reveal>
       </div>
