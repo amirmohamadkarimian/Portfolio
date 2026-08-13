@@ -1,0 +1,1407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amirmohamad Karimian — Frontend Developer & UI/UX Designer</title>
+    <meta
+      name="description"
+      content="Portfolio of Amirmohamad Karimian, a Frontend Developer specialized in React, TypeScript, Next.js, Vite, and UI/UX design."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" aria-live="polite" role="status">
+      <span class="toast-icon">✓</span>
+      <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-menu-overlay" aria-hidden="true">
+      <div class="mobile-menu-container">
+        <div class="mobile-menu-header">
+          <a href="#hero" class="brand-logo cursive">Amirmohamad</a>
+          <button
+            id="close-menu-btn"
+            class="close-menu-btn"
+            aria-label="Close Navigation Menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-nav-links">
+          <a href="#hero" class="mobile-nav-link active">Home</a>
+          <a href="#about" class="mobile-nav-link"> About</a>
+          <a href="#skills" class="mobile-nav-link"> Skills</a>
+          <a href="#projects" class="mobile-nav-link"> Projects</a>
+          <a href="#blog" class="mobile-nav-link"> Blog</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+        <div class="mobile-menu-footer">
+          <a
+            href="CV Resume.pdf"
+            download="Amirmohamad_Karimian_CV.pdf"
+            class="btn btn-primary btn-full"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header id="site-header" class="site-header">
+      <div class="header-container container">
+        <!-- Logo Signature -->
+        <a
+          href="#hero"
+          class="brand-logo cursive"
+          aria-label="Amirmohamad Karimian Home"
+        >
+          Amirmohamad
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <ul class="nav-list">
+            <li>
+              <a href="#about" class="nav-link"
+                ><span class="pill-wrapper">ABOUT</span></a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="nav-link"
+                ><span class="pill-wrapper">SKILLS</span></a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="nav-link"
+                ><span class="pill-wrapper">PROJECTS</span></a
+              >
+            </li>
+            <li>
+              <a href="#blog" class="nav-link"
+                ><span class="pill-wrapper">BLOG</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link"
+                ><span class="pill-wrapper">CONTACT</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Right Action Group -->
+        <div class="header-actions">
+          <a
+            href="CV Resume.pdf"
+            download="Amirmohamad_Karimian_CV.pdf"
+            class="btn btn-cv-download"
+            aria-label="Download Amirmohamad Karimian CV PDF"
+          >
+            <svg
+              class="icon-dl"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download CV</span>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button
+            id="open-menu-btn"
+            class="hamburger-btn"
+            aria-label="Open Navigation Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Header Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-container container">
+          <div class="hero-grid">
+            <!-- Column 1: Left Content & Headline -->
+            <div class="hero-col hero-left">
+              <div class="headline-group">
+                <h1 class="hero-title">
+                  Hey There,<br />
+                  <span class="hero-title-highlight">I'm Amirmohamad</span>
+                </h1>
+                <div class="email-direct-wrapper">
+                  <a
+                    href="mailto:karimian.dev@gmail.com"
+                    id="hero-email-btn"
+                    class="email-direct-link"
+                    title="Click to email or copy address"
+                  >
+                    karimian.dev@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="hero-experience-card">
+                <div class="exp-number">5+</div>
+                <div class="exp-label">
+                  <strong>YEARS</strong>
+                  <span>EXPERIENCE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Center Image with Brush Backdrop & Stamp -->
+            <div class="hero-col hero-center">
+              <div class="portrait-stage">
+                <!-- Custom SVG Brush Stroke Background -->
+                <svg
+                  class="brush-stroke-svg"
+                  viewBox="0 0 500 550"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M82.4 45.3C132.8 18.2 210.5 12.1 278.4 24.3C346.3 36.5 404.4 67 438.2 118.6C472 170.2 481.5 242.9 462.1 315.8C442.7 388.7 394.4 461.8 327.9 494.5C261.4 527.2 176.7 519.5 110.2 475.8C43.7 432.1 -4.6 352.4 1.2 280.2C7 208 66.9 143.3 82.4 45.3Z"
+                    fill="#0D7C66"
+                  />
+                  <path
+                    d="M120 70C200 40 330 35 410 90C490 145 470 250 440 340C410 430 330 480 230 490C130 500 40 430 30 330C20 230 40 100 120 70Z"
+                    fill="#0D7C66"
+                    opacity="0.85"
+                  />
+                </svg>
+
+                <!-- Profile Picture Cutout -->
+                <div class="portrait-frame">
+                  <img
+                    src="selfie.png"
+                    alt="Amirmohamad Karimian - Frontend Developer"
+                    class="portrait-img"
+                  />
+                </div>
+
+                <!-- Rotating Stamp Badge -->
+                <div class="stamp-badge-wrapper">
+                  <div class="stamp-badge">
+                    <svg class="stamp-text-svg" viewBox="0 0 100 100">
+                      <path
+                        id="circlePath"
+                        d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                        fill="none"
+                      />
+                      <text
+                        font-size="8.8"
+                        font-weight="700"
+                        letter-spacing="1.4"
+                        fill="#0F2C3A"
+                      >
+                        <textPath href="#circlePath">
+                          FRONTEND DEVELOPER • UI/UX DESIGNER •
+                        </textPath>
+                      </text>
+                    </svg>
+                    <div class="stamp-center-icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#0F2C3A"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3: Right Bio Tagline -->
+            <div class="hero-col hero-right">
+              <div class="hero-bio-box">
+                <p class="hero-tagline">
+                  I design & build beautifully simple, scalable web
+                  applications, and I love what I do.
+                </p>
+                <div class="role-pills">
+                  <span class="role-pill">React & Next.js</span>
+                  <span class="role-pill">TypeScript</span>
+                  <span class="role-pill">Tailwind CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION (Who I Am & What I Do) -->
+      <section id="about" class="about-section">
+        <div class="about-container container">
+          <div class="about-grid">
+            <!-- Left Column: Service & Specialty Cards Stack -->
+            <div class="about-cards-col">
+              <!-- Card 1: Web Application Design -->
+              <div class="service-card">
+                <div class="service-icon-circle icon-teal">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="3"
+                      width="20"
+                      height="14"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                </div>
+                <div class="service-info">
+                  <h3 class="service-title">Web Application Design</h3>
+                  <span class="service-count">40+ Projects</span>
+                </div>
+              </div>
+
+              <!-- Card 2: Frontend Architecture & React -->
+              <div class="service-card">
+                <div class="service-icon-circle icon-yellow">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="5"
+                      y="2"
+                      width="14"
+                      height="20"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                </div>
+                <div class="service-info">
+                  <h3 class="service-title">Frontend & React Dev</h3>
+                  <span class="service-count">35+ Web Apps</span>
+                </div>
+              </div>
+
+              <!-- Card 3: UI/UX & Brand Systems -->
+              <div class="service-card">
+                <div class="service-icon-circle icon-coral">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="service-info">
+                  <h3 class="service-title">UI/UX & Design Systems</h3>
+                  <span class="service-count">25+ Design Systems</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Content & Stats -->
+            <div class="about-content-col">
+              <span class="section-tag">/ 01 — ABOUT</span>
+              <h2 class="about-heading">What do I help?</h2>
+
+              <div class="about-text-body">
+                <p>
+                  I help ambitious founders and engineering teams transform
+                  complex ideas into polished, high-performance web products. By
+                  blending engineering precision in React, Next.js, and
+                  TypeScript with human-centered UI/UX design, I craft
+                  interfaces that look stunning and perform effortlessly.
+                </p>
+                <p>
+                  My workflow focuses on component modularity, clean state
+                  management, responsive accessibility, and speed—ensuring every
+                  product not only meets business goals but also delights its
+                  users.
+                </p>
+              </div>
+
+              <!-- Real Sourced Stats Block -->
+              <div class="about-stats-row">
+                <div class="stat-item">
+                  <div class="stat-number">45+</div>
+                  <div class="stat-label">Project Completed</div>
+                </div>
+
+                <div class="stat-item">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">Client Satisfaction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE / MY PATH SECTION -->
+      <section id="experience" class="experience-section">
+        <div class="experience-container container">
+          <div class="experience-header">
+            <span class="section-tag">/ CAREER PATH</span>
+            <h2 class="experience-title">My Path as a Developer</h2>
+          </div>
+
+          <div class="timeline-wrapper">
+            <div class="timeline-track-line"></div>
+
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-left">
+                <h3 class="company-name">Senior Frontend Engineer</h3>
+                <span class="timeline-date">Sep 2023 — Present</span>
+              </div>
+
+              <div class="timeline-center">
+                <div class="timeline-node node-teal">
+                  <span class="node-dot"></span>
+                </div>
+              </div>
+
+              <div class="timeline-right">
+                <h4 class="role-title">Lead Frontend & Next.js Architect</h4>
+                <p class="role-desc">
+                  Architecting modern React & Next.js web applications, building
+                  component design systems with Tailwind CSS and TypeScript, and
+                  optimizing Web Vitals for maximum performance and conversion.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-left">
+                <h3 class="company-name">Frontend UI Engineer</h3>
+                <span class="timeline-date">Jan 2021 — Aug 2023</span>
+              </div>
+
+              <div class="timeline-center">
+                <div class="timeline-node node-coral">
+                  <span class="node-dot"></span>
+                </div>
+              </div>
+
+              <div class="timeline-right">
+                <h4 class="role-title">UI/UX & React Specialist</h4>
+                <p class="role-desc">
+                  Designed and developed responsive web interfaces, interactive
+                  data dashboards, state management pipelines using Redux
+                  Toolkit, and cross-browser accessible web apps.
+                </p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-left">
+                <h3 class="company-name">Web Developer & Designer</h3>
+                <span class="timeline-date">Feb 2019 — Dec 2020</span>
+              </div>
+
+              <div class="timeline-center">
+                <div class="timeline-node node-yellow">
+                  <span class="node-dot"></span>
+                </div>
+              </div>
+
+              <div class="timeline-right">
+                <h4 class="role-title">Full-Stack Web Developer</h4>
+                <p class="role-desc">
+                  Crafted custom client web applications, JavaScript utilities,
+                  API integrations, and collaborative Figma prototyping for
+                  digital products.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 — SKILLS SECTION -->
+      <section id="skills" class="skills-section">
+        <div class="skills-container container">
+          <div class="skills-header">
+            <span class="section-tag">/ 02 — SKILLS</span>
+            <h2 class="skills-title">Technical Proficiency & Core Strengths</h2>
+            <p class="skills-subtitle">
+              A balanced synthesis of frontend engineering mastery and
+              disciplined soft skills for building high-stakes digital products.
+            </p>
+          </div>
+
+          <div class="skills-main-grid">
+            <!-- Column 1: Technical Stack Matrix -->
+            <div class="skills-block tech-skills-block">
+              <h3 class="skills-block-title">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                Frontend Tech Stack
+              </h3>
+
+              <div class="tech-grid">
+                <!-- Skill Item 1: React & Next.js -->
+                <div class="tech-card">
+                  <div class="tech-icon-wrapper icon-teal-bg">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="2"></circle>
+                      <path d="M12 2v20M2 12h20"></path>
+                    </svg>
+                  </div>
+                  <div class="tech-details">
+                    <h4 class="tech-name">React & Next.js</h4>
+                    <span class="tech-desc"
+                      >App Router, SSR/SSG, Server Components, Custom
+                      Hooks</span
+                    >
+                  </div>
+                  <span class="tech-badge">Advanced</span>
+                </div>
+
+                <!-- Skill Item 2: TypeScript & JavaScript -->
+                <div class="tech-card">
+                  <div class="tech-icon-wrapper icon-yellow-bg">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path>
+                    </svg>
+                  </div>
+                  <div class="tech-details">
+                    <h4 class="tech-name">TypeScript & JS (ES6+)</h4>
+                    <span class="tech-desc"
+                      >Strict Typing, Generics, Async/Await, ES Modules</span
+                    >
+                  </div>
+                  <span class="tech-badge">Advanced</span>
+                </div>
+
+                <!-- Skill Item 3: Tailwind CSS & HTML5/CSS3 -->
+                <div class="tech-card">
+                  <div class="tech-icon-wrapper icon-coral-bg">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="tech-details">
+                    <h4 class="tech-name">Tailwind CSS & CSS3</h4>
+                    <span class="tech-desc"
+                      >Design System Tokens, Responsive Layouts,
+                      Animations</span
+                    >
+                  </div>
+                  <span class="tech-badge">Mastery</span>
+                </div>
+
+                <!-- Skill Item 4: Redux Toolkit & State -->
+                <div class="tech-card">
+                  <div class="tech-icon-wrapper icon-navy-bg">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="tech-details">
+                    <h4 class="tech-name">Redux Toolkit & State</h4>
+                    <span class="tech-desc"
+                      >Global State, RTK Query, Context API, Persistence</span
+                    >
+                  </div>
+                  <span class="tech-badge">Advanced</span>
+                </div>
+
+                <!-- Skill Item 5: Vite & Build Tools -->
+                <div class="tech-card">
+                  <div class="tech-icon-wrapper icon-teal-bg">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polygon
+                        points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                      ></polygon>
+                    </svg>
+                  </div>
+                  <div class="tech-details">
+                    <h4 class="tech-name">Vite & Tooling</h4>
+                    <span class="tech-desc"
+                      >Fast HMR, Bundling Optimization, npm/pnpm, Git</span
+                    >
+                  </div>
+                  <span class="tech-badge">Proficient</span>
+                </div>
+
+                <!-- Skill Item 6: Vercel & Figma -->
+                <div class="tech-card">
+                  <div class="tech-icon-wrapper icon-yellow-bg">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M12 2l10 18H2L12 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="tech-details">
+                    <h4 class="tech-name">Vercel & Figma</h4>
+                    <span class="tech-desc"
+                      >CI/CD Deployment, Edge Functions, Design Handoff</span
+                    >
+                  </div>
+                  <span class="tech-badge">Proficient</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Soft Skills & Core Philosophy -->
+            <div class="skills-block soft-skills-block">
+              <h3 class="skills-block-title">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Professional Soft Skills
+              </h3>
+
+              <div class="soft-skills-grid">
+                <!-- Soft Skill 1: Time Management -->
+                <div class="soft-card">
+                  <div class="soft-header">
+                    <div class="soft-icon icon-teal">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <h4 class="soft-title">Time Management</h4>
+                  </div>
+                  <p class="soft-desc">
+                    Structuring development sprints efficiently, estimating
+                    milestones accurately, and meeting strict delivery deadlines
+                    without sacrificing code quality.
+                  </p>
+                </div>
+
+                <!-- Soft Skill 2: Flexibility -->
+                <div class="soft-card">
+                  <div class="soft-header">
+                    <div class="soft-icon icon-coral">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h4 class="soft-title">Flexibility</h4>
+                  </div>
+                  <p class="soft-desc">
+                    Adapting smoothly to evolving project scope, shifting
+                    technical stack requirements, and integrating feedback into
+                    iterative UI refactoring.
+                  </p>
+                </div>
+
+                <!-- Soft Skill 3: Prioritization -->
+                <div class="soft-card">
+                  <div class="soft-header">
+                    <div class="soft-icon icon-yellow">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="16"></line>
+                      </svg>
+                    </div>
+                    <h4 class="soft-title">Prioritization</h4>
+                  </div>
+                  <p class="soft-desc">
+                    Distinguishing high-impact features from low-leverage tasks,
+                    optimizing core user journeys first, and delivering MVP
+                    value rapidly.
+                  </p>
+                </div>
+
+                <!-- Soft Skill 4: Resilience under Pressure -->
+                <div class="soft-card">
+                  <div class="soft-header">
+                    <div class="soft-icon icon-navy">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <h4 class="soft-title">Resilience under Pressure</h4>
+                  </div>
+                  <p class="soft-desc">
+                    Maintaining composure, technical rigor, and problem-solving
+                    focus during critical production bugs, tight launch windows,
+                    or hotfixes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 — PROJECTS SECTION (My Latest Works & Slider) -->
+      <section id="projects" class="projects-section">
+        <div class="projects-container container">
+          <!-- Header Row -->
+          <div class="projects-header-row">
+            <div class="projects-header-left">
+              <span class="section-tag">/ 03 — PROJECTS</span>
+              <h2 class="projects-title">My Latest Works</h2>
+              <p class="projects-subtitle">
+                Perfect solution for digital experience
+              </p>
+            </div>
+
+            <div class="projects-header-right">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="explore-more-link"
+              >
+                Explore More Works
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+
+              <!-- Slider Control Buttons -->
+              <div class="slider-controls">
+                <button
+                  id="slider-prev-btn"
+                  class="slider-arrow-btn"
+                  aria-label="Previous Project"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                  </svg>
+                </button>
+                <button
+                  id="slider-next-btn"
+                  class="slider-arrow-btn"
+                  aria-label="Next Project"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Carousel Stage -->
+          <div class="projects-slider-wrapper">
+            <div id="projects-slider-track" class="projects-slider-track">
+              <!-- Project Card 1: App Design -->
+              <article class="project-card card-yellow">
+                <div class="project-card-header">
+                  <h3 class="project-category">App Design</h3>
+                  <h4 class="project-name">Food Delivery App</h4>
+                </div>
+                <div class="project-card-media">
+                  <img
+                    src="project_mockup_app.png"
+                    alt="Food Delivery App UI Mockup"
+                    class="project-img"
+                  />
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-tags">
+                    <span class="project-tag-pill">React Native</span>
+                    <span class="project-tag-pill">Redux Toolkit</span>
+                  </div>
+                  <a
+                    href="#contact"
+                    class="project-view-btn"
+                    aria-label="View Food Delivery App details"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Project Card 2: Web Design -->
+              <article class="project-card card-teal">
+                <div class="project-card-header">
+                  <h3 class="project-category">Web Design</h3>
+                  <h4 class="project-name">Agency & Portfolio Platform</h4>
+                </div>
+                <div class="project-card-media">
+                  <img
+                    src="project_mockup_web.png"
+                    alt="Agency Website UI Mockup"
+                    class="project-img"
+                  />
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-tags">
+                    <span class="project-tag-pill">Next.js 14</span>
+                    <span class="project-tag-pill">TypeScript</span>
+                  </div>
+                  <a
+                    href="#contact"
+                    class="project-view-btn"
+                    aria-label="View Agency Website details"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Project Card 3: Brand Identity & UI System -->
+              <article class="project-card card-mint">
+                <div class="project-card-header">
+                  <h3 class="project-category">Brand Identity</h3>
+                  <h4 class="project-name">Enterprise Component System</h4>
+                </div>
+                <div class="project-card-media mockup-mint-stage">
+                  <div class="ui-mockup-canvas">
+                    <div class="mockup-header-bar">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                      <span class="mockup-title-text"
+                        >design-system.tokens.json</span
+                      >
+                    </div>
+                    <div class="mockup-body-content">
+                      <div class="palette-swatches">
+                        <span class="swatch sw-navy"></span>
+                        <span class="swatch sw-teal"></span>
+                        <span class="swatch sw-yellow"></span>
+                        <span class="swatch sw-coral"></span>
+                      </div>
+                      <div class="mockup-component-row">
+                        <div class="mockup-btn btn-sample-primary">
+                          Primary Button
+                        </div>
+                        <div class="mockup-badge-sample">Active Badge</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-tags">
+                    <span class="project-tag-pill">Figma Tokens</span>
+                    <span class="project-tag-pill">Tailwind CSS</span>
+                  </div>
+                  <a
+                    href="#contact"
+                    class="project-view-btn"
+                    aria-label="View Component System details"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Project Card 4: E-Commerce Experience -->
+              <article class="project-card card-coral">
+                <div class="project-card-header">
+                  <h3 class="project-category">E-Commerce</h3>
+                  <h4 class="project-name">Next.js Retail Storefront</h4>
+                </div>
+                <div class="project-card-media mockup-coral-stage">
+                  <div class="ui-mockup-canvas">
+                    <div class="mockup-header-bar">
+                      <span class="dot red"></span>
+                      <span class="dot yellow"></span>
+                      <span class="dot green"></span>
+                      <span class="mockup-title-text">store.checkout.app</span>
+                    </div>
+                    <div class="mockup-body-content store-grid-sample">
+                      <div class="store-item-card">
+                        <div class="store-img-placeholder"></div>
+                        <div class="store-line short"></div>
+                        <div class="store-line long"></div>
+                      </div>
+                      <div class="store-item-card">
+                        <div class="store-img-placeholder"></div>
+                        <div class="store-line short"></div>
+                        <div class="store-line long"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-tags">
+                    <span class="project-tag-pill">Vite & React</span>
+                    <span class="project-tag-pill">Redux & Stripe</span>
+                  </div>
+                  <a
+                    href="#contact"
+                    class="project-view-btn"
+                    aria-label="View E-Commerce Storefront details"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Slider Progress Bar -->
+          <div class="slider-pagination-bar">
+            <div id="slider-progress" class="slider-progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 — BLOG SECTION (Articles & Insights) -->
+      <section id="blog" class="blog-section">
+        <div class="blog-container container">
+          <!-- Blog Header Row -->
+          <div class="blog-header-row">
+            <div class="blog-header-left">
+              <span class="section-tag">/ 04 — BLOG</span>
+              <h2 class="blog-title">Articles & Insights</h2>
+              <p class="blog-subtitle">
+                Ideas, tutorials, and engineering notes on modern web
+                architecture and UI/UX design.
+              </p>
+            </div>
+
+            <div class="blog-header-right">
+              <a
+                href="https://dev.to"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="read-all-link"
+              >
+                Read All Articles
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blog Cards Grid -->
+          <div class="blog-grid">
+            <!-- Article Card 1 -->
+            <article class="blog-card">
+              <div class="blog-card-meta">
+                <span class="blog-category-tag tag-teal"
+                  >Next.js & Performance</span
+                >
+                <span class="blog-date">Aug 10, 2026 • 5 min read</span>
+              </div>
+
+              <h3 class="blog-card-title">
+                <a href="#contact"
+                  >Architecting High-Performance Next.js 14 Apps with Server
+                  Components</a
+                >
+              </h3>
+
+              <p class="blog-card-excerpt">
+                How leveraging React Server Components, streaming SSR, and
+                aggressive caching strategies reduced core bundle sizes by 45%
+                in production.
+              </p>
+
+              <div class="blog-card-footer">
+                <a href="#contact" class="blog-read-btn">
+                  <span>Read Article</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Article Card 2 -->
+            <article class="blog-card">
+              <div class="blog-card-meta">
+                <span class="blog-category-tag tag-coral"
+                  >UI/UX & Design Systems</span
+                >
+                <span class="blog-date">Jul 28, 2026 • 7 min read</span>
+              </div>
+
+              <h3 class="blog-card-title">
+                <a href="#contact"
+                  >Building Scalable Design Systems with Tailwind CSS &
+                  TypeScript</a
+                >
+              </h3>
+
+              <p class="blog-card-excerpt">
+                A practical guide to structuring design tokens, enforcing strict
+                type-safe prop interfaces, and creating flexible UI component
+                libraries.
+              </p>
+
+              <div class="blog-card-footer">
+                <a href="#contact" class="blog-read-btn">
+                  <span>Read Article</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Article Card 3 -->
+            <article class="blog-card">
+              <div class="blog-card-meta">
+                <span class="blog-category-tag tag-yellow"
+                  >State Management</span
+                >
+                <span class="blog-date">Jul 14, 2026 • 4 min read</span>
+              </div>
+
+              <h3 class="blog-card-title">
+                <a href="#contact"
+                  >Mastering Redux Toolkit & RTK Query for Complex Async
+                  Workflows</a
+                >
+              </h3>
+
+              <p class="blog-card-excerpt">
+                Streamlining global client state, normalized cache management,
+                and optimistic UI updates without boilerplate overload.
+              </p>
+
+              <div class="blog-card-footer">
+                <a href="#contact" class="blog-read-btn">
+                  <span>Read Article</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact & Footer Section -->
+      <section id="contact" class="contact-section">
+        <div class="contact-container container">
+          <div class="contact-top-grid">
+            <!-- Left CTA Heading -->
+            <div class="contact-cta-block">
+              <span class="section-tag">/ 05 — CONTACT</span>
+              <h2 class="contact-heading">
+                Let’s make something amazing together.
+              </h2>
+
+              <div class="contact-action-wrapper">
+                <span class="sub-label">Start by</span>
+                <a href="mailto:karimian.dev@gmail.com" class="saying-hi-link">
+                  saying hi
+                  <svg
+                    class="arrow-icon"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Information & Links -->
+            <div class="contact-info-block">
+              <div class="info-group">
+                <h3 class="info-title">Information</h3>
+                <p class="info-detail">Tehran, Iran / Remote Worldwide</p>
+                <p class="info-email-line">
+                  <a href="mailto:karimian.dev@gmail.com" class="info-email"
+                    >karimian.dev@gmail.com</a
+                  >
+                </p>
+              </div>
+
+              <div class="info-group">
+                <h3 class="info-title">Navigation</h3>
+                <ul class="footer-nav-list">
+                  <li><a href="#hero">Home</a></li>
+                  <li><a href="#about">01 — About</a></li>
+                  <li><a href="#skills">02 — Skills</a></li>
+                  <li><a href="#projects">03 — Projects</a></li>
+                  <li><a href="#blog">04 — Blog</a></li>
+                </ul>
+              </div>
+
+              <div class="info-group">
+                <h3 class="info-title">Connect</h3>
+                <ul class="social-links-list">
+                  <li>
+                    <a
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub ↗</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >LinkedIn ↗</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://figma.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Figma ↗</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="CV Resume.pdf"
+                      download="Amirmohamad_Karimian_CV.pdf"
+                      >Download Resume PDF</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Bottom Bar -->
+          <div class="footer-bottom-bar">
+            <div class="footer-brand">
+              <a href="#hero" class="brand-logo cursive">Amirmohamad</a>
+              <span class="copyright-text"
+                >© 2026 Amirmohamad Karimian. All Rights Reserved.</span
+              >
+            </div>
+
+            <div class="footer-meta">
+              <span class="meta-tag"
+                >Crafted with React, TypeScript & Passion</span
+              >
+              <a href="#hero" class="back-to-top-btn" aria-label="Back to Top">
+                <span>Top</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="12" y1="19" x2="12" y2="5"></line>
+                  <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
