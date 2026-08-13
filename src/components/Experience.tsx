@@ -6,7 +6,6 @@ export const Experience: React.FC = () => {
     <section id="experience" className="experience-section">
       <div className="experience-container container">
         <div className="experience-header">
-          <span className="section-tag">/ CAREER PATH</span>
           <h2 className="experience-title">My Path as a Developer</h2>
         </div>
 

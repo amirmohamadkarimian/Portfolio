@@ -8,6 +8,7 @@
   --bg-main: #f8f7f3;
   --bg-surface: #ffffff;
   --bg-alt: #f1efea;
+  --bg-hero: #f0eee9;
 
   --text-navy: #0f2c3a;
   --text-body: #344c57;
@@ -227,6 +228,7 @@ button {
   left: 0;
   width: 100%;
   z-index: 1000;
+  background-color: var(--bg-alt);
   padding: 1.5rem 0;
   transition:
     background-color 0.3s ease,
@@ -235,7 +237,7 @@ button {
 }
 
 .site-header.scrolled {
-  background-color: rgba(248, 247, 243, 0.92);
+  background-color: rgba(241, 239, 234, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 1rem 0;
@@ -347,7 +349,7 @@ button {
   width: 85%;
   max-width: 380px;
   height: 100%;
-  background-color: var(--bg-main);
+  background-color: var(--bg-alt);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -408,6 +410,7 @@ button {
    HERO HEADER SECTION
    ========================================================================== */
 .hero-section {
+  background-color: var(--bg-hero);
   padding-top: 8.5rem;
   padding-bottom: 5rem;
   position: relative;
@@ -1219,7 +1222,7 @@ button {
 .projects-section {
   padding: 6.5rem 0;
   border-top: 1px solid var(--border-subtle);
-  background-color: var(--bg-main);
+  background-color: var(--bg-alt);
   overflow: hidden;
 }
 
@@ -1671,7 +1674,7 @@ button {
 .blog-section {
   padding: 6.5rem 0;
   border-top: 1px solid var(--border-subtle);
-  background-color: var(--bg-alt);
+  background-color: var(--bg-main);
 }
 
 .blog-header-row {

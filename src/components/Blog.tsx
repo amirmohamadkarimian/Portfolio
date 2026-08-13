@@ -8,7 +8,6 @@ export const Blog: React.FC = () => {
         {/* Blog Header Row */}
         <div className="blog-header-row">
           <div className="blog-header-left">
-            <span className="section-tag">/ 04 — BLOG</span>
             <h2 className="blog-title">Articles & Insights</h2>
             <p className="blog-subtitle">
               Ideas, tutorials, and engineering notes on modern web

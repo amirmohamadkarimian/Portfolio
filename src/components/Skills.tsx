@@ -6,7 +6,6 @@ export const Skills: React.FC = () => {
     <section id="skills" className="skills-section">
       <div className="skills-container container">
         <div className="skills-header">
-          <span className="section-tag">/ 02 — SKILLS</span>
           <h2 className="skills-title">Technical Proficiency & Core Strengths</h2>
           <p className="skills-subtitle">
             A balanced synthesis of frontend engineering mastery and

@@ -47,14 +47,6 @@ export const Hero: React.FC<HeroProps> = ({ onCopyEmail }) => {
                 </a>
               </div>
             </div>
-
-            <div className="hero-experience-card">
-              <div className="exp-number">5+</div>
-              <div className="exp-label">
-                <strong>YEARS</strong>
-                <span>EXPERIENCE</span>
-              </div>
-            </div>
           </div>
 
           {/* Column 2: Center Image with Brush Backdrop & Stamp */}
@@ -104,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({ onCopyEmail }) => {
                       fill="#0F2C3A"
                     >
                       <textPath href="#circlePath">
-                        FRONTEND DEVELOPER • UI/UX DESIGNER •
+                        FRONTEND DEVELOPER • UI SPECIALIST •
                       </textPath>
                     </text>
                   </svg>
@@ -132,14 +124,9 @@ export const Hero: React.FC<HeroProps> = ({ onCopyEmail }) => {
           <div className="hero-col hero-right">
             <div className="hero-bio-box">
               <p className="hero-tagline">
-                I design & build beautifully simple, scalable web applications,
-                and I love what I do.
+                I build fast, responsive web applications, turning complex
+                designs into seamless user experiences.
               </p>
-              <div className="role-pills">
-                <span className="role-pill">React & Next.js</span>
-                <span className="role-pill">TypeScript</span>
-                <span className="role-pill">Tailwind CSS</span>
-              </div>
             </div>
           </div>
         </div>

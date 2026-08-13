@@ -7,7 +7,6 @@ export const Contact: React.FC = () => {
         <div className="contact-top-grid">
           {/* Left CTA Heading */}
           <div className="contact-cta-block">
-            <span className="section-tag">/ 05 — CONTACT</span>
             <h2 className="contact-heading">
               Let’s make something amazing together.
             </h2>
@@ -41,33 +40,12 @@ export const Contact: React.FC = () => {
           <div className="contact-info-block">
             <div className="info-group">
               <h3 className="info-title">Information</h3>
-              <p className="info-detail">Tehran, Iran / Remote Worldwide</p>
+              <p className="info-detail">Tehran, Iran</p>
               <p className="info-email-line">
                 <a href="mailto:karimian.dev@gmail.com" className="info-email">
                   karimian.dev@gmail.com
                 </a>
               </p>
-            </div>
-
-            <div className="info-group">
-              <h3 className="info-title">Navigation</h3>
-              <ul className="footer-nav-list">
-                <li>
-                  <a href="#hero">Home</a>
-                </li>
-                <li>
-                  <a href="#about">About</a>
-                </li>
-                <li>
-                  <a href="#skills">Skills</a>
-                </li>
-                <li>
-                  <a href="#projects">Projects</a>
-                </li>
-                <li>
-                  <a href="#blog">Blog</a>
-                </li>
-              </ul>
             </div>
 
             <div className="info-group">
@@ -91,6 +69,24 @@ export const Contact: React.FC = () => {
                     LinkedIn ↗
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://t.me/codescoffee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Telegram ↗
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/amirm.code/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram ↗
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -102,9 +98,7 @@ export const Contact: React.FC = () => {
             <a href="#hero" className="brand-logo cursive">
               Amirmohamad
             </a>
-            <span className="copyright-text">
-              © 2026 Amirmohamad Karimian. All Rights Reserved.
-            </span>
+            <span className="copyright-text">© 2026. All Rights Reserved.</span>
           </div>
 
           <div className="footer-meta">

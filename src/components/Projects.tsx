@@ -102,7 +102,6 @@ export const Projects: React.FC = () => {
         {/* Header Row */}
         <div className="projects-header-row">
           <div className="projects-header-left">
-            <span className="section-tag">/ 03 — PROJECTS</span>
             <h2 className="projects-title">My Latest Works</h2>
             <p className="projects-subtitle">
               Perfect solution for digital experience

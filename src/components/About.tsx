@@ -1,5 +1,5 @@
-import React from 'react';
-import { SERVICES_DATA } from '../data/portfolioData';
+import React from "react";
+import { SERVICES_DATA } from "../data/portfolioData";
 
 export const About: React.FC = () => {
   return (
@@ -23,20 +23,19 @@ export const About: React.FC = () => {
 
           {/* Right Column: Content & Stats */}
           <div className="about-content-col">
-            <span className="section-tag">/ 01 — ABOUT</span>
             <h2 className="about-heading">What do I help?</h2>
 
             <div className="about-text-body">
               <p>
                 I help ambitious founders and engineering teams transform
                 complex ideas into polished, high-performance web products. By
-                blending engineering precision in React, Next.js, and
-                TypeScript with human-centered UI/UX design, I craft
-                interfaces that look stunning and perform effortlessly.
+                blending engineering precision in React, Next.js, and TypeScript
+                with human-centered UI/UX design, I craft interfaces that look
+                stunning and perform effortlessly.
               </p>
               <p>
                 My workflow focuses on component modularity, clean state
-                management, responsive accessibility, and speed—ensuring every
+                management, responsive accessibility, and speed, ensuring every
                 product not only meets business goals but also delights its
                 users.
               </p>
@@ -45,7 +44,7 @@ export const About: React.FC = () => {
             {/* Real Sourced Stats Block */}
             <div className="about-stats-row">
               <div className="stat-item">
-                <div className="stat-number">45+</div>
+                <div className="stat-number">10+</div>
                 <div className="stat-label">Project Completed</div>
               </div>
 
