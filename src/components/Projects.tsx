@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { PROJECTS_DATA } from "../data/portfolioData";
+import { Reveal } from "./Reveal";
 
 export const Projects: React.FC = () => {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -100,6 +101,7 @@ export const Projects: React.FC = () => {
     <section id="projects" className="projects-section">
       <div className="projects-container container">
         {/* Header Row */}
+        <Reveal>
         <div className="projects-header-row">
           <div className="projects-header-left">
             <h2 className="projects-title">My Latest Works</h2>
@@ -178,8 +180,10 @@ export const Projects: React.FC = () => {
             </div>
           </div>
         </div>
+        </Reveal>
 
         {/* Slider Carousel Stage */}
+        <Reveal delay={150}>
         <div className="projects-slider-wrapper">
           <div
             id="projects-slider-track"
@@ -296,8 +300,10 @@ export const Projects: React.FC = () => {
             ))}
           </div>
         </div>
+        </Reveal>
 
         {/* Slider Progress Bar */}
+        <Reveal delay={250}>
         <div className="slider-pagination-bar">
           <div
             id="slider-progress"
@@ -305,6 +311,7 @@ export const Projects: React.FC = () => {
             style={{ width: `${progressWidth}%` }}
           ></div>
         </div>
+        </Reveal>
       </div>
     </section>
   );

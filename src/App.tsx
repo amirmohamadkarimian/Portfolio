@@ -74,13 +74,13 @@ export const App: React.FC = () => {
       />
 
       <main>
-        <Hero onCopyEmail={showToast} />
+        <Hero />
         <About />
         <Experience />
         <Skills />
         <Projects />
         <Blog />
-        <Contact />
+        <Contact onShowToast={showToast} />
       </main>
     </>
   );
