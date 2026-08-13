@@ -1763,6 +1763,15 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  align-items: stretch;
+}
+
+.blog-grid > .reveal {
+  height: 100%;
+}
+
+.blog-grid > .reveal > .blog-card {
+  height: 100%;
 }
 
 @media (min-width: 900px) {
