@@ -1341,7 +1341,6 @@ button {
   scroll-snap-type: x mandatory;
   padding-bottom: 1.5rem;
   padding-top: 0.5rem;
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 
