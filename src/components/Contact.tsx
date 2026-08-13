@@ -56,16 +56,16 @@ export const Contact: React.FC = () => {
                   <a href="#hero">Home</a>
                 </li>
                 <li>
-                  <a href="#about">01 — About</a>
+                  <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#skills">02 — Skills</a>
+                  <a href="#skills">Skills</a>
                 </li>
                 <li>
-                  <a href="#projects">03 — Projects</a>
+                  <a href="#projects">Projects</a>
                 </li>
                 <li>
-                  <a href="#blog">04 — Blog</a>
+                  <a href="#blog">Blog</a>
                 </li>
               </ul>
             </div>
