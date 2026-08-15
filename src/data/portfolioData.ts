@@ -12,7 +12,7 @@ export const SERVICES_DATA: ServiceCard[] = [
   {
     id: "web-design",
     title: "Web Application Design",
-    count: "40+ Projects",
+    count: "7+ Projects",
     iconBgClass: "icon-teal",
     iconSvg: React.createElement(
       "svg",
@@ -41,7 +41,7 @@ export const SERVICES_DATA: ServiceCard[] = [
   {
     id: "react-dev",
     title: "Frontend & React Dev",
-    count: "35+ Web Apps",
+    count: "5+ Web Apps",
     iconBgClass: "icon-yellow",
     iconSvg: React.createElement(
       "svg",
@@ -74,7 +74,7 @@ export const SERVICES_DATA: ServiceCard[] = [
   {
     id: "ui-ux",
     title: "UI/UX & Design Systems",
-    count: "25+ Design Systems",
+    count: "3+ Design Systems",
     iconBgClass: "icon-coral",
     iconSvg: React.createElement(
       "svg",
@@ -127,8 +127,8 @@ export const TIMELINE_DATA: TimelineItem[] = [
 
 export const TECH_SKILLS_DATA: TechSkill[] = [
   {
-    id: "skill-react",
-    name: "React & Next.js",
+    id: "skill-html&css",
+    name: "HTML5 & CSS3",
     description: "App Router, SSR/SSG, Server Components, Custom Hooks",
     badgeText: "Advanced",
     iconBgClass: "icon-teal-bg",
@@ -147,8 +147,8 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     ),
   },
   {
-    id: "skill-ts",
-    name: "TypeScript & JS (ES6+)",
+    id: "skill-js",
+    name: "JavaScript",
     description: "Strict Typing, Generics, Async/Await, ES Modules",
     badgeText: "Advanced",
     iconBgClass: "icon-yellow-bg",
@@ -167,7 +167,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
   },
   {
     id: "skill-tailwind",
-    name: "Tailwind CSS & CSS3",
+    name: "Tailwind CSS ",
     description: "Design System Tokens, Responsive Layouts, Animations",
     badgeText: "Mastery",
     iconBgClass: "icon-coral-bg",
@@ -188,7 +188,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
   },
   {
     id: "skill-redux",
-    name: "Redux Toolkit & State",
+    name: "Redux",
     description: "Global State, RTK Query, Context API, Persistence",
     badgeText: "Advanced",
     iconBgClass: "icon-navy-bg",
@@ -208,8 +208,8 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     ),
   },
   {
-    id: "skill-vite",
-    name: "Vite & Tooling",
+    id: "skill-ts",
+    name: "TypeScript",
     description: "Fast HMR, Bundling Optimization, npm/pnpm, Git",
     badgeText: "Proficient",
     iconBgClass: "icon-teal-bg",
@@ -229,8 +229,8 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     ),
   },
   {
-    id: "skill-vercel",
-    name: "Vercel & Figma",
+    id: "skill-npm",
+    name: "NPM",
     description: "CI/CD Deployment, Edge Functions, Design Handoff",
     badgeText: "Proficient",
     iconBgClass: "icon-yellow-bg",
@@ -249,7 +249,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
   },
   {
     id: "skill-graphql",
-    name: "GraphQL & REST APIs",
+    name: "REST APIs",
     description: "Apollo Client, Axios, OpenAPI, WebSockets, Async Fetching",
     badgeText: "Advanced",
     iconBgClass: "icon-teal-bg",
@@ -284,7 +284,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
   },
   {
     id: "skill-testing",
-    name: "Jest & Playwright",
+    name: "React",
     description:
       "React Testing Library, Unit & Integration, E2E Testing, CI/CD",
     badgeText: "Proficient",
@@ -308,8 +308,8 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     ),
   },
   {
-    id: "skill-a11y",
-    name: "HTML5 & Accessibility",
+    id: "skill-git",
+    name: "Git & GitHub",
     description:
       "Semantic Markup, ARIA Standards, WCAG 2.1, SEO Best Practices",
     badgeText: "Mastery",
@@ -333,7 +333,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
   },
   {
     id: "skill-perf",
-    name: "Web Performance & SEO",
+    name: "Web Performance",
     description:
       "Core Web Vitals, Code Splitting, Asset Bundling, Lighthouse 100",
     badgeText: "Advanced",
@@ -484,36 +484,36 @@ export const PROJECTS_DATA: ProjectItem[] = [
 export const BLOG_DATA: BlogArticle[] = [
   {
     id: "blog-1",
-    category: "Next.js & Performance",
+    category: "Web Design",
     categoryTagClass: "tag-teal",
-    date: "Aug 10, 2026",
+    date: "Aug 15, 2026",
     readTime: "5 min read",
-    title:
-      "Architecting High-Performance Next.js 14 Apps with Server Components",
+    title: "Responsive Web Design: Creating Websites for Every Device",
     excerpt:
-      "How leveraging React Server Components, streaming SSR, and aggressive caching strategies reduced core bundle sizes by 45% in production.",
-    url: "#contact",
+      "The way people access websites has changed dramatically. Users browse the web from smartphones, tablets, laptops, and large desktop screens. A website that works well on only one device is no longer enough.",
+    url: "https://dev.to/amirmohamad_87cc8fe6136bb/responsive-web-design-creating-websites-for-every-device-18e5",
   },
   {
     id: "blog-2",
-    category: "UI/UX & Design Systems",
+    category: "Web Development",
     categoryTagClass: "tag-coral",
-    date: "Jul 28, 2026",
+    date: "Aug 15, 2026",
     readTime: "7 min read",
-    title: "Building Scalable Design Systems with Tailwind CSS & TypeScript",
+    title: "Why Clean Code Matters in Web Development",
     excerpt:
       "A practical guide to structuring design tokens, enforcing strict type-safe prop interfaces, and creating flexible UI component libraries.",
-    url: "#contact",
+    url: "https://dev.to/amirmohamad_87cc8fe6136bb/why-clean-code-matters-in-web-development-n8h",
   },
   {
     id: "blog-3",
-    category: "State Management",
+    category: "Frontend Development",
     categoryTagClass: "tag-yellow",
-    date: "Jul 14, 2026",
+    date: "Aug 15, 2026",
     readTime: "4 min read",
-    title: "Mastering Redux Toolkit & RTK Query for Complex Async Workflows",
+    title:
+      "The Future of Frontend Development: Building Better Web Experiences",
     excerpt:
       "Streamlining global client state, normalized cache management, and optimistic UI updates without boilerplate overload.",
-    url: "#contact",
+    url: "https://dev.to/amirmohamad_87cc8fe6136bb/the-future-of-frontend-development-building-better-web-experiences-4698",
   },
 ];

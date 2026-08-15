@@ -693,8 +693,8 @@ button {
 }
 
 .stamp-badge {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 50%;
@@ -1338,7 +1338,7 @@ button {
    03 — PROJECTS SECTION & SLIDER
    ========================================================================== */
 .projects-section {
-  padding: 6.5rem 0;
+  padding: 3.5rem 0;
   border-top: 1px solid var(--border-subtle);
   background-color: var(--bg-alt);
   overflow: hidden;
@@ -1348,7 +1348,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -2047,6 +2047,13 @@ button {
   color: var(--text-muted);
   font-weight: 450;
   max-width: 540px;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .contact-subtext {
+    margin-bottom: 0;
+  }
 }
 
 .contact-details-grid {

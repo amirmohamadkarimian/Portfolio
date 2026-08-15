@@ -210,13 +210,13 @@ export const Hero: React.FC = () => {
                       fill="none"
                     />
                     <text
-                      fontSize="9.7"
+                      fontSize="8.3"
                       fontWeight="700"
                       letterSpacing="1.4"
                       fill="#0F2C3A"
                     >
                       <textPath href="#circlePath">
-                        FRONTEND DEVELOPER • UI BUILDER •
+                        FRONTEND DEVELOPER • UI UX DESIGNER •
                       </textPath>
                     </text>
                   </svg>

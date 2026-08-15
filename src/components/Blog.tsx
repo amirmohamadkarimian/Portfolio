@@ -1,6 +1,6 @@
-import React from 'react';
-import { BLOG_DATA } from '../data/portfolioData';
-import { Reveal } from './Reveal';
+import React from "react";
+import { BLOG_DATA } from "../data/portfolioData";
+import { Reveal } from "./Reveal";
 
 export const Blog: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ export const Blog: React.FC = () => {
               <h2 className="blog-title">Articles & Insights</h2>
               <p className="blog-subtitle">
                 Ideas, tutorials, and engineering notes on modern web
-                architecture and UI/UX design.
+                architecture and frontend development.
               </p>
             </div>
 
@@ -49,7 +49,9 @@ export const Blog: React.FC = () => {
             <Reveal key={article.id} className="reveal-scale" delay={i * 100}>
               <article className="blog-card">
                 <div className="blog-card-meta">
-                  <span className={`blog-category-tag ${article.categoryTagClass}`}>
+                  <span
+                    className={`blog-category-tag ${article.categoryTagClass}`}
+                  >
                     {article.category}
                   </span>
                   <span className="blog-date">
