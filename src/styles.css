@@ -458,7 +458,7 @@ button {
 .hero-section {
   background-color: var(--bg-hero);
   padding-top: 8.5rem;
-  padding-bottom: 8rem;
+  padding-bottom: 5rem;
   position: relative;
   overflow: hidden;
 }
@@ -466,21 +466,21 @@ button {
 @media (min-width: 1024px) {
   .hero-section {
     padding-top: 10rem;
-    padding-bottom: 9rem;
+    padding-bottom: 6rem;
   }
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: center;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .hero-grid {
-    grid-template-columns: 1.15fr 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+    gap: 4rem;
   }
 }
 
@@ -488,16 +488,26 @@ button {
 .hero-left {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: flex-start;
 }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-size: clamp(2.25rem, 3.5vw, 2.75rem);
   font-weight: 800;
   line-height: 1.1;
   color: var(--text-navy);
   letter-spacing: -1px;
+}
+
+.hero-title-intro {
+  display: inline-block;
+}
+
+@media (min-width: 1200px) {
+  .hero-title-intro {
+    white-space: nowrap;
+  }
 }
 
 .hero-title-highlight {
@@ -505,11 +515,36 @@ button {
   color: var(--text-navy);
 }
 
+.hero-bio-box {
+  max-width: 38rem;
+  margin-top: 1.5rem;
+}
+
 .hero-socials {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   margin-top: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.btn-secondary {
+  color: var(--text-navy);
+  background: transparent;
+  border: 1.5px solid var(--text-navy);
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  background: var(--text-navy);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 .hero-social-link {
@@ -666,19 +701,25 @@ button {
   justify-content: center;
 }
 
-/* Hero Right Column */
-.hero-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 0.5rem;
-}
-
 .hero-tagline {
   font-size: 1.1rem;
   line-height: 1.65;
   color: var(--text-body);
   font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .hero-socials {
+    flex-wrap: wrap;
+  }
 }
 
 .role-pills {
