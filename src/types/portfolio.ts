@@ -39,7 +39,7 @@ export interface ProjectItem {
   cardClass: string;
   image?: string;
   tags: string[];
-  mockupType?: 'app' | 'web' | 'mint' | 'coral';
+  mockupType?: "app" | "web" | "mint" | "coral";
 }
 
 export interface BlogArticle {

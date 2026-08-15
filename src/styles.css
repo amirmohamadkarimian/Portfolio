@@ -377,7 +377,9 @@ button {
      tab order and accessibility tree (avoids the aria-hidden focus trap). */
   visibility: hidden;
   /* Fade in instantly; delay hiding visibility until the fade-out finishes. */
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  transition:
+    opacity 0.3s ease,
+    visibility 0s linear 0.3s;
 }
 
 .mobile-menu-overlay.open {
@@ -457,6 +459,7 @@ button {
    ========================================================================== */
 .hero-section {
   background-color: var(--bg-hero);
+  min-height: 100vh;
   padding-top: 8.5rem;
   padding-bottom: 5rem;
   position: relative;
@@ -465,8 +468,12 @@ button {
 
 @media (min-width: 1024px) {
   .hero-section {
-    padding-top: 10rem;
-    padding-bottom: 6rem;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -475,12 +482,16 @@ button {
   grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: center;
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
   .hero-grid {
+    width: 100%;
+    min-height: calc(100vh - 8rem);
     grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
     gap: 4rem;
+    align-items: center;
   }
 }
 
@@ -489,6 +500,24 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  order: 2;
+}
+
+@media (min-width: 1200px) {
+  .hero-left {
+    order: 1;
+  }
+}
+
+/* Hero Center Column */
+.hero-center {
+  order: 1;
+}
+
+@media (min-width: 1200px) {
+  .hero-center {
+    order: 2;
+  }
 }
 
 .hero-title {
@@ -664,8 +693,8 @@ button {
 }
 
 .stamp-badge {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: 50%;
@@ -1416,6 +1445,8 @@ button {
   position: relative;
   width: 100%;
   margin-bottom: 2rem;
+  background: var(--bg-alt);
+  border-radius: var(--radius-lg);
 }
 
 .projects-slider-track {
@@ -1426,6 +1457,7 @@ button {
   scroll-snap-type: x mandatory;
   padding-bottom: 1.5rem;
   padding-top: 0.5rem;
+  background: transparent;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
@@ -1466,7 +1498,7 @@ button {
 
 /* Card Themes from Reference */
 .card-yellow {
-  background-color: var(--accent-yellow);
+  background-color: rgb(145, 164, 145);
   color: var(--text-navy);
 }
 
@@ -1975,14 +2007,27 @@ button {
 }
 
 .contact-left-col {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: contents;
+}
+
+@media (min-width: 992px) {
+  .contact-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .contact-cta-block {
   display: flex;
   flex-direction: column;
+  order: 1;
+}
+
+@media (min-width: 992px) {
+  .contact-cta-block {
+    order: 0;
+  }
 }
 
 .contact-heading {

@@ -38,15 +38,15 @@ export const About: React.FC = () => {
                 <p>
                   I help ambitious founders and engineering teams transform
                   complex ideas into polished, high-performance web products. By
-                  blending engineering precision in React, Next.js, and TypeScript
-                  with human-centered UI/UX design, I craft interfaces that look
-                  stunning and perform effortlessly.
+                  blending engineering precision in React, Next.js, and
+                  TypeScript with human-centered UI/UX design, I craft
+                  interfaces that look stunning and perform effortlessly.
                 </p>
                 <p>
                   My workflow focuses on component modularity, clean state
-                  management, responsive accessibility, and speed, ensuring every
-                  product not only meets business goals but also delights its
-                  users.
+                  management, responsive accessibility, and speed, ensuring
+                  every product not only meets business goals but also delights
+                  its users.
                 </p>
               </div>
             </Reveal>
@@ -55,13 +55,13 @@ export const About: React.FC = () => {
             <Reveal delay={300}>
               <div className="about-stats-row">
                 <div className="stat-item">
-                  <div className="stat-number">10+</div>
+                  <div className="stat-number">8+</div>
                   <div className="stat-label">Project Completed</div>
                 </div>
 
                 <div className="stat-item">
-                  <div className="stat-number">100%</div>
-                  <div className="stat-label">Client Satisfaction</div>
+                  <div className="stat-number">10+</div>
+                  <div className="stat-label">Technologies</div>
                 </div>
               </div>
             </Reveal>

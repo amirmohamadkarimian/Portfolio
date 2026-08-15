@@ -98,8 +98,8 @@ export const SERVICES_DATA: ServiceCard[] = [
 export const TIMELINE_DATA: TimelineItem[] = [
   {
     id: "exp-1",
-    company: "Junior Frontend Engineer",
-    date: "Sep 2023 — Present",
+    company: "Maptify",
+    date: "Personal Project",
     role: "Lead Frontend & Next.js Architect",
     description:
       "Architecting modern React & Next.js web applications, building component design systems with Tailwind CSS and TypeScript, and optimizing Web Vitals for maximum performance and conversion.",
@@ -107,8 +107,8 @@ export const TIMELINE_DATA: TimelineItem[] = [
   },
   {
     id: "exp-2",
-    company: "Frontend UI Engineer",
-    date: "Jan 2021 — Aug 2023",
+    company: "Banky",
+    date: "Personal Project",
     role: "UI/UX & React Specialist",
     description:
       "Designed and developed responsive web interfaces, interactive data dashboards, state management pipelines using Redux Toolkit, and cross-browser accessible web apps.",
@@ -116,8 +116,8 @@ export const TIMELINE_DATA: TimelineItem[] = [
   },
   {
     id: "exp-3",
-    company: "Web Developer & Designer",
-    date: "Feb 2019 — Dec 2020",
+    company: "Task Manager",
+    date: "Personal Project",
     role: "Frontend Web Developer",
     description:
       "Crafted custom client web applications, JavaScript utilities, API integrations, and collaborative Figma prototyping for digital products.",
@@ -268,14 +268,25 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
       React.createElement("circle", { cx: "18", cy: "5", r: "3" }),
       React.createElement("circle", { cx: "6", cy: "12", r: "3" }),
       React.createElement("circle", { cx: "18", cy: "19", r: "3" }),
-      React.createElement("line", { x1: "8.59", y1: "13.51", x2: "15.42", y2: "17.49" }),
-      React.createElement("line", { x1: "15.41", y1: "6.51", x2: "8.59", y2: "10.49" }),
+      React.createElement("line", {
+        x1: "8.59",
+        y1: "13.51",
+        x2: "15.42",
+        y2: "17.49",
+      }),
+      React.createElement("line", {
+        x1: "15.41",
+        y1: "6.51",
+        x2: "8.59",
+        y2: "10.49",
+      }),
     ),
   },
   {
     id: "skill-testing",
     name: "Jest & Playwright",
-    description: "React Testing Library, Unit & Integration, E2E Testing, CI/CD",
+    description:
+      "React Testing Library, Unit & Integration, E2E Testing, CI/CD",
     badgeText: "Proficient",
     iconBgClass: "icon-navy-bg",
     iconSvg: React.createElement(
@@ -290,14 +301,17 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
         strokeLinecap: "round",
         strokeLinejoin: "round",
       },
-      React.createElement("path", { d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" }),
+      React.createElement("path", {
+        d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z",
+      }),
       React.createElement("polyline", { points: "9 12 11 14 15 10" }),
     ),
   },
   {
     id: "skill-a11y",
     name: "HTML5 & Accessibility",
-    description: "Semantic Markup, ARIA Standards, WCAG 2.1, SEO Best Practices",
+    description:
+      "Semantic Markup, ARIA Standards, WCAG 2.1, SEO Best Practices",
     badgeText: "Mastery",
     iconBgClass: "icon-coral-bg",
     iconSvg: React.createElement(
@@ -320,7 +334,8 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
   {
     id: "skill-perf",
     name: "Web Performance & SEO",
-    description: "Core Web Vitals, Code Splitting, Asset Bundling, Lighthouse 100",
+    description:
+      "Core Web Vitals, Code Splitting, Asset Bundling, Lighthouse 100",
     badgeText: "Advanced",
     iconBgClass: "icon-yellow-bg",
     iconSvg: React.createElement(
@@ -335,7 +350,9 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
         strokeLinecap: "round",
         strokeLinejoin: "round",
       },
-      React.createElement("polyline", { points: "23 6 13.5 15.5 8.5 10.5 1 18" }),
+      React.createElement("polyline", {
+        points: "23 6 13.5 15.5 8.5 10.5 1 18",
+      }),
       React.createElement("polyline", { points: "17 6 23 6 23 12" }),
     ),
   },
@@ -430,16 +447,16 @@ export const SOFT_SKILLS_DATA: SoftSkill[] = [
 export const PROJECTS_DATA: ProjectItem[] = [
   {
     id: "proj-1",
-    category: "App Design",
+    category: "Maptify",
     title: "Food Delivery App",
     cardClass: "card-yellow",
-    image: "project_mockup_app.png",
+    image: "project_maptify.png",
     tags: ["React Native", "Redux Toolkit"],
     mockupType: "app",
   },
   {
     id: "proj-2",
-    category: "Web Design",
+    category: "Banky",
     title: "Agency & Portfolio Platform",
     cardClass: "card-teal",
     image: "project_mockup_web.png",
@@ -448,7 +465,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: "proj-3",
-    category: "Brand Identity",
+    category: "watch Land",
     title: "Enterprise Component System",
     cardClass: "card-mint",
     tags: ["Figma Tokens", "Tailwind CSS"],
@@ -456,7 +473,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: "proj-4",
-    category: "E-Commerce",
+    category: "24hr Story Feature",
     title: "Next.js Retail Storefront",
     cardClass: "card-coral",
     tags: ["Vite & React", "Redux & Stripe"],

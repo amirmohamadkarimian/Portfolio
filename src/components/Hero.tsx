@@ -7,7 +7,9 @@ export const Hero: React.FC = () => {
           <div className="hero-col hero-left">
             <div className="headline-group">
               <h1 className="hero-title">
-                <span className="hero-title-intro">Hey There, I'm Amirmohamad</span>
+                <span className="hero-title-intro">
+                  Hey There, I'm Amirmohamad
+                </span>
                 <br />
                 <span className="hero-title-highlight">Frontend Developer</span>
               </h1>
@@ -208,13 +210,13 @@ export const Hero: React.FC = () => {
                       fill="none"
                     />
                     <text
-                      fontSize="8.8"
+                      fontSize="9.7"
                       fontWeight="700"
                       letterSpacing="1.4"
                       fill="#0F2C3A"
                     >
                       <textPath href="#circlePath">
-                        FRONTEND DEVELOPER • UI SPECIALIST •
+                        FRONTEND DEVELOPER • UI BUILDER •
                       </textPath>
                     </text>
                   </svg>
