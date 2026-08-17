@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
 interface RevealProps {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ interface RevealProps {
  */
 export const Reveal: React.FC<RevealProps> = ({
   children,
-  className = '',
+  className = "",
   delay = 0,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,7 +28,17 @@ export const Reveal: React.FC<RevealProps> = ({
     const node = ref.current;
     if (!node) return;
 
-    if (typeof IntersectionObserver === 'undefined') {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    if (prefersReducedMotion || isMobile) {
+      setInView(true);
+      return;
+    }
+
+    if (typeof IntersectionObserver === "undefined") {
       setInView(true);
       return;
     }
@@ -42,7 +52,7 @@ export const Reveal: React.FC<RevealProps> = ({
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" },
     );
 
     observer.observe(node);
@@ -52,7 +62,7 @@ export const Reveal: React.FC<RevealProps> = ({
   return (
     <div
       ref={ref}
-      className={`reveal ${inView ? 'in-view' : ''} ${className}`.trim()}
+      className={`reveal ${inView ? "in-view" : ""} ${className}`.trim()}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}

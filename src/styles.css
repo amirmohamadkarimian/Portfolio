@@ -58,6 +58,21 @@ html {
   font-size: 16px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 body {
   background-color: var(--bg-main);
   color: var(--text-body);
@@ -241,19 +256,35 @@ button {
   z-index: 1000;
   background-color: var(--bg-alt);
   padding: 1.2rem 0;
+  transform: translateY(0);
+  opacity: 1;
   transition:
     background-color 0.3s ease,
     padding 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.site-header.hidden {
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .site-header.scrolled {
   background-color: rgba(241, 239, 234, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 0.85rem 0;
   border-bottom: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 767px) {
+  .site-header.scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
 
 .header-container {
@@ -370,6 +401,7 @@ button {
   height: 100vh;
   background-color: rgba(15, 44, 58, 0.4);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 2000;
   opacity: 0;
   pointer-events: none;
@@ -1594,8 +1626,32 @@ button {
 .mockup-coral-stage {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 1rem;
+}
+
+@media (max-width: 767px) {
+  .mobile-menu-overlay,
+  .site-header.scrolled,
+  .mockup-mint-stage,
+  .mockup-coral-stage {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .service-card,
+  .tech-card,
+  .soft-card,
+  .blog-card,
+  .project-card,
+  .hero-social-link,
+  .slider-arrow-btn,
+  .explore-more-link,
+  .read-all-link,
+  .back-to-top-btn {
+    transition-duration: 0.12s;
+  }
 }
 
 .ui-mockup-canvas {
@@ -2343,6 +2399,17 @@ button {
     opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
+}
+
+@media (max-width: 767px) {
+  .reveal,
+  .reveal.reveal-left,
+  .reveal.reveal-right,
+  .reveal.reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Visible state applied by IntersectionObserver */

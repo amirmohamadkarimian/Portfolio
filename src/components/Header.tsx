@@ -1,26 +1,39 @@
-import React from 'react';
+import React from "react";
 
 interface HeaderProps {
   isScrolled: boolean;
+  isVisible: boolean;
   activeSection: string;
   onOpenMenu: () => void;
 }
 
 const NAV_ITEMS = [
-  { id: 'hero', label: 'HOME' },
-  { id: 'about', label: 'ABOUT' },
-  { id: 'skills', label: 'SKILLS' },
-  { id: 'projects', label: 'PROJECTS' },
-  { id: 'blog', label: 'BLOG' },
-  { id: 'contact', label: 'CONTACT' },
+  { id: "hero", label: "HOME" },
+  { id: "about", label: "ABOUT" },
+  { id: "skills", label: "SKILLS" },
+  { id: "projects", label: "PROJECTS" },
+  { id: "blog", label: "BLOG" },
+  { id: "contact", label: "CONTACT" },
 ];
 
-export const Header: React.FC<HeaderProps> = ({ isScrolled, activeSection, onOpenMenu }) => {
+export const Header: React.FC<HeaderProps> = ({
+  isScrolled,
+  isVisible,
+  activeSection,
+  onOpenMenu,
+}) => {
   return (
-    <header id="site-header" className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
+    <header
+      id="site-header"
+      className={`site-header ${isScrolled ? "scrolled" : ""} ${isVisible ? "visible" : "hidden"}`}
+    >
       <div className="header-container container">
         {/* Logo Signature */}
-        <a href="#hero" className="brand-logo cursive" aria-label="Amirmohamad Karimian Home">
+        <a
+          href="#hero"
+          className="brand-logo cursive"
+          aria-label="Amirmohamad Karimian Home"
+        >
           Amirmohamad
         </a>
 
@@ -31,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({ isScrolled, activeSection, onOpe
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+                  className={`nav-link ${activeSection === item.id ? "active" : ""}`}
                 >
                   <span className="pill-wrapper">{item.label}</span>
                 </a>

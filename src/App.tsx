@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import "./styles.css";
 
 import { Toast } from "./components/Toast";
@@ -14,9 +14,14 @@ import { Contact } from "./components/Contact";
 
 export const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [toast, setToast] = useState({ visible: false, message: "" });
+  const lastScrollY = useRef(0);
+  const activeSectionRef = useRef(activeSection);
+  const isScrolledRef = useRef(false);
+  const isHeaderVisibleRef = useRef(true);
 
   const showToast = useCallback((msg: string) => {
     setToast({ visible: true, message: msg });
@@ -26,19 +31,61 @@ export const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Header scroll background toggle
-      if (window.scrollY > 30) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+    activeSectionRef.current = activeSection;
+  }, [activeSection]);
+
+  useEffect(() => {
+    isScrolledRef.current = isScrolled;
+  }, [isScrolled]);
+
+  useEffect(() => {
+    isHeaderVisibleRef.current = isHeaderVisible;
+  }, [isHeaderVisible]);
+
+  useEffect(() => {
+    setIsHeaderVisible(true);
+    lastScrollY.current = window.scrollY;
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    let rafId: number | null = null;
+
+    const updateScrollState = () => {
+      const currentScrollY = window.scrollY;
+      const nextScrolled = currentScrollY > 30;
+
+      if (nextScrolled !== isScrolledRef.current) {
+        isScrolledRef.current = nextScrolled;
+        setIsScrolled(nextScrolled);
       }
 
-      // Active section highlight
+      if (mobileMenuOpen) {
+        if (!isHeaderVisibleRef.current) {
+          isHeaderVisibleRef.current = true;
+          setIsHeaderVisible(true);
+        }
+        lastScrollY.current = currentScrollY;
+        rafId = null;
+        return;
+      }
+
+      let nextHeaderVisible = true;
+      if (currentScrollY > 10 && currentScrollY > lastScrollY.current) {
+        nextHeaderVisible = false;
+      }
+
+      if (nextHeaderVisible !== isHeaderVisibleRef.current) {
+        isHeaderVisibleRef.current = nextHeaderVisible;
+        setIsHeaderVisible(nextHeaderVisible);
+      }
+
+      lastScrollY.current = currentScrollY;
+
       const sections = document.querySelectorAll<HTMLElement>("section[id]");
       const scrollY = window.pageYOffset;
+      let nextActiveSection = activeSectionRef.current;
 
-      sections.forEach((current) => {
+      for (const current of sections) {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 150;
         const sectionId = current.getAttribute("id");
@@ -48,9 +95,22 @@ export const App: React.FC = () => {
           scrollY > sectionTop &&
           scrollY <= sectionTop + sectionHeight
         ) {
-          setActiveSection(sectionId);
+          nextActiveSection = sectionId;
+          break;
         }
-      });
+      }
+
+      if (nextActiveSection !== activeSectionRef.current) {
+        activeSectionRef.current = nextActiveSection;
+        setActiveSection(nextActiveSection);
+      }
+
+      rafId = null;
+    };
+
+    const handleScroll = () => {
+      if (rafId !== null) return;
+      rafId = window.requestAnimationFrame(updateScrollState);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -58,8 +118,11 @@ export const App: React.FC = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (rafId !== null) {
+        window.cancelAnimationFrame(rafId);
+      }
     };
-  }, []);
+  }, [mobileMenuOpen]);
 
   return (
     <>
@@ -73,6 +136,7 @@ export const App: React.FC = () => {
 
       <Header
         isScrolled={isScrolled}
+        isVisible={isHeaderVisible}
         activeSection={activeSection}
         onOpenMenu={() => setMobileMenuOpen(true)}
       />

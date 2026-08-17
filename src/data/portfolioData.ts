@@ -130,6 +130,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-html&css",
     name: "HTML5 & CSS3",
     description: "App Router, SSR/SSG, Server Components, Custom Hooks",
+    badgeText: "HTML/CSS",
     iconBgClass: "icon-teal-bg",
     iconSvg: React.createElement(
       "svg",
@@ -149,6 +150,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-js",
     name: "JavaScript",
     description: "Strict Typing, Generics, Async/Await, ES Modules",
+    badgeText: "JS",
     iconBgClass: "icon-yellow-bg",
     iconSvg: React.createElement(
       "svg",
@@ -167,6 +169,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-tailwind",
     name: "Tailwind CSS ",
     description: "Design System Tokens, Responsive Layouts, Animations",
+    badgeText: "Tailwind",
     iconBgClass: "icon-coral-bg",
     iconSvg: React.createElement(
       "svg",
@@ -187,6 +190,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-redux",
     name: "Redux",
     description: "Global State, RTK Query, Context API, Persistence",
+    badgeText: "State",
     iconBgClass: "icon-navy-bg",
     iconSvg: React.createElement(
       "svg",
@@ -207,6 +211,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-ts",
     name: "TypeScript",
     description: "Fast HMR, Bundling Optimization, npm/pnpm, Git",
+    badgeText: "TS",
     iconBgClass: "icon-teal-bg",
     iconSvg: React.createElement(
       "svg",
@@ -227,6 +232,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-npm",
     name: "NPM",
     description: "CI/CD Deployment, Edge Functions, Design Handoff",
+    badgeText: "NPM",
     iconBgClass: "icon-yellow-bg",
     iconSvg: React.createElement(
       "svg",
@@ -245,6 +251,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-graphql",
     name: "REST APIs",
     description: "Apollo Client, Axios, OpenAPI, WebSockets, Async Fetching",
+    badgeText: "API",
     iconBgClass: "icon-teal-bg",
     iconSvg: React.createElement(
       "svg",
@@ -280,6 +287,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     name: "React",
     description:
       "React Testing Library, Unit & Integration, E2E Testing, CI/CD",
+    badgeText: "React",
     iconBgClass: "icon-navy-bg",
     iconSvg: React.createElement(
       "svg",
@@ -304,6 +312,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     name: "Git & GitHub",
     description:
       "Semantic Markup, ARIA Standards, WCAG 2.1, SEO Best Practices",
+    badgeText: "Git",
     iconBgClass: "icon-coral-bg",
     iconSvg: React.createElement(
       "svg",
@@ -327,6 +336,7 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     name: "Web Performance",
     description:
       "Core Web Vitals, Code Splitting, Asset Bundling, Lighthouse 100",
+    badgeText: "Perf",
     iconBgClass: "icon-yellow-bg",
     iconSvg: React.createElement(
       "svg",
