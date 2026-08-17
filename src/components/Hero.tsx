@@ -215,9 +215,7 @@ export const Hero: React.FC = () => {
                       letterSpacing="1.4"
                       fill="#0F2C3A"
                     >
-                      <textPath href="#circlePath">
-                        FRONTEND DEVELOPER • UI UX DESIGNER •
-                      </textPath>
+                      <textPath href="#circlePath">FRONTEND DEVELOPER</textPath>
                     </text>
                   </svg>
                   <div className="stamp-center-icon">

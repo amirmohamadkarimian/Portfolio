@@ -60,8 +60,8 @@ export const About: React.FC = () => {
                 </div>
 
                 <div className="stat-item">
-                  <div className="stat-number">10+</div>
-                  <div className="stat-label">Technologies</div>
+                  <div className="stat-number">100%</div>
+                  <div className="stat-label">Responsive Design</div>
                 </div>
               </div>
             </Reveal>

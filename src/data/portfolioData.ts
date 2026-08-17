@@ -11,8 +11,8 @@ import {
 export const SERVICES_DATA: ServiceCard[] = [
   {
     id: "web-design",
-    title: "Web Application Design",
-    count: "7+ Projects",
+    title: "Frontend Development",
+    count: "",
     iconBgClass: "icon-teal",
     iconSvg: React.createElement(
       "svg",
@@ -40,8 +40,8 @@ export const SERVICES_DATA: ServiceCard[] = [
   },
   {
     id: "react-dev",
-    title: "Frontend & React Dev",
-    count: "5+ Web Apps",
+    title: "Responsive Web Design",
+    count: "",
     iconBgClass: "icon-yellow",
     iconSvg: React.createElement(
       "svg",
@@ -73,8 +73,8 @@ export const SERVICES_DATA: ServiceCard[] = [
   },
   {
     id: "ui-ux",
-    title: "UI/UX & Design Systems",
-    count: "3+ Design Systems",
+    title: "Component & UI Systems",
+    count: "",
     iconBgClass: "icon-coral",
     iconSvg: React.createElement(
       "svg",
@@ -98,29 +98,29 @@ export const SERVICES_DATA: ServiceCard[] = [
 export const TIMELINE_DATA: TimelineItem[] = [
   {
     id: "exp-1",
-    company: "Maptify",
-    date: "Personal Project",
-    role: "Lead Frontend & Next.js Architect",
+    company: "Started the Journey",
+    date: "2023",
+    role: "",
     description:
-      "Architecting modern React & Next.js web applications, building component design systems with Tailwind CSS and TypeScript, and optimizing Web Vitals for maximum performance and conversion.",
+      "Began learning web development fundamentals — HTML, CSS, and JavaScript with a focus on building interactive user interfaces.",
     nodeClass: "node-teal",
   },
   {
     id: "exp-2",
-    company: "Banky",
-    date: "Personal Project",
-    role: "UI/UX & React Specialist",
+    company: "Diving into React",
+    date: "2024",
+    role: "",
     description:
-      "Designed and developed responsive web interfaces, interactive data dashboards, state management pipelines using Redux Toolkit, and cross-browser accessible web apps.",
+      "Transitioned to React and modern tooling, building component-based applications and exploring state management patterns.",
     nodeClass: "node-coral",
   },
   {
     id: "exp-3",
-    company: "Task Manager",
-    date: "Personal Project",
-    role: "Frontend Web Developer",
+    company: "Modern Frontend Stack",
+    date: "2025",
+    role: "",
     description:
-      "Crafted custom client web applications, JavaScript utilities, API integrations, and collaborative Figma prototyping for digital products.",
+      "Adopted TypeScript, Next.js, and Tailwind CSS to ship production-ready projects with strong performance and developer experience.",
     nodeClass: "node-yellow",
   },
 ];
@@ -130,7 +130,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-html&css",
     name: "HTML5 & CSS3",
     description: "App Router, SSR/SSG, Server Components, Custom Hooks",
-    badgeText: "Advanced",
     iconBgClass: "icon-teal-bg",
     iconSvg: React.createElement(
       "svg",
@@ -150,7 +149,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-js",
     name: "JavaScript",
     description: "Strict Typing, Generics, Async/Await, ES Modules",
-    badgeText: "Advanced",
     iconBgClass: "icon-yellow-bg",
     iconSvg: React.createElement(
       "svg",
@@ -169,7 +167,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-tailwind",
     name: "Tailwind CSS ",
     description: "Design System Tokens, Responsive Layouts, Animations",
-    badgeText: "Mastery",
     iconBgClass: "icon-coral-bg",
     iconSvg: React.createElement(
       "svg",
@@ -190,7 +187,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-redux",
     name: "Redux",
     description: "Global State, RTK Query, Context API, Persistence",
-    badgeText: "Advanced",
     iconBgClass: "icon-navy-bg",
     iconSvg: React.createElement(
       "svg",
@@ -211,7 +207,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-ts",
     name: "TypeScript",
     description: "Fast HMR, Bundling Optimization, npm/pnpm, Git",
-    badgeText: "Proficient",
     iconBgClass: "icon-teal-bg",
     iconSvg: React.createElement(
       "svg",
@@ -232,7 +227,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-npm",
     name: "NPM",
     description: "CI/CD Deployment, Edge Functions, Design Handoff",
-    badgeText: "Proficient",
     iconBgClass: "icon-yellow-bg",
     iconSvg: React.createElement(
       "svg",
@@ -251,7 +245,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     id: "skill-graphql",
     name: "REST APIs",
     description: "Apollo Client, Axios, OpenAPI, WebSockets, Async Fetching",
-    badgeText: "Advanced",
     iconBgClass: "icon-teal-bg",
     iconSvg: React.createElement(
       "svg",
@@ -287,7 +280,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     name: "React",
     description:
       "React Testing Library, Unit & Integration, E2E Testing, CI/CD",
-    badgeText: "Proficient",
     iconBgClass: "icon-navy-bg",
     iconSvg: React.createElement(
       "svg",
@@ -312,7 +304,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     name: "Git & GitHub",
     description:
       "Semantic Markup, ARIA Standards, WCAG 2.1, SEO Best Practices",
-    badgeText: "Mastery",
     iconBgClass: "icon-coral-bg",
     iconSvg: React.createElement(
       "svg",
@@ -336,7 +327,6 @@ export const TECH_SKILLS_DATA: TechSkill[] = [
     name: "Web Performance",
     description:
       "Core Web Vitals, Code Splitting, Asset Bundling, Lighthouse 100",
-    badgeText: "Advanced",
     iconBgClass: "icon-yellow-bg",
     iconSvg: React.createElement(
       "svg",

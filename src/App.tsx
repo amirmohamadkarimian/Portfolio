@@ -1,27 +1,27 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import './styles.css';
+import React, { useState, useEffect, useCallback } from "react";
+import "./styles.css";
 
-import { Toast } from './components/Toast';
-import { Header } from './components/Header';
-import { MobileMenu } from './components/MobileMenu';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Experience } from './components/Experience';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Blog } from './components/Blog';
-import { Contact } from './components/Contact';
+import { Toast } from "./components/Toast";
+import { Header } from "./components/Header";
+import { MobileMenu } from "./components/MobileMenu";
+import { Hero } from "./components/Hero";
+import { About } from "./components/About";
+import { Experience } from "./components/Experience";
+import { Skills } from "./components/Skills";
+import { Projects } from "./components/Projects";
+import { Blog } from "./components/Blog";
+import { Contact } from "./components/Contact";
 
 export const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
-  const [toast, setToast] = useState({ visible: false, message: '' });
+  const [activeSection, setActiveSection] = useState("hero");
+  const [toast, setToast] = useState({ visible: false, message: "" });
 
   const showToast = useCallback((msg: string) => {
     setToast({ visible: true, message: msg });
     setTimeout(() => {
-      setToast({ visible: false, message: '' });
+      setToast({ visible: false, message: "" });
     }, 3000);
   }, []);
 
@@ -35,25 +35,29 @@ export const App: React.FC = () => {
       }
 
       // Active section highlight
-      const sections = document.querySelectorAll<HTMLElement>('section[id]');
+      const sections = document.querySelectorAll<HTMLElement>("section[id]");
       const scrollY = window.pageYOffset;
 
       sections.forEach((current) => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 150;
-        const sectionId = current.getAttribute('id');
+        const sectionId = current.getAttribute("id");
 
-        if (sectionId && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        if (
+          sectionId &&
+          scrollY > sectionTop &&
+          scrollY <= sectionTop + sectionHeight
+        ) {
           setActiveSection(sectionId);
         }
       });
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

@@ -46,7 +46,7 @@ export const Skills: React.FC = () => {
                     <div className="tech-details">
                       <h4 className="tech-name">{tech.name}</h4>
                     </div>
-                    <span className="tech-badge">{tech.badgeText}</span>
+                    {tech.badgeText && <span className="tech-badge">{tech.badgeText}</span>}
                   </div>
                 ))}
               </div>

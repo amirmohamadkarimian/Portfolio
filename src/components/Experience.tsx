@@ -1,6 +1,6 @@
-import React from 'react';
-import { TIMELINE_DATA } from '../data/portfolioData';
-import { Reveal } from './Reveal';
+import React from "react";
+import { TIMELINE_DATA } from "../data/portfolioData";
+import { Reveal } from "./Reveal";
 
 export const Experience: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ export const Experience: React.FC = () => {
       <div className="experience-container container">
         <Reveal>
           <div className="experience-header">
-            <h2 className="experience-title">My Path as a Developer</h2>
+            <h2 className="experience-title">My Journey</h2>
           </div>
         </Reveal>
 
@@ -41,4 +41,3 @@ export const Experience: React.FC = () => {
     </section>
   );
 };
-
