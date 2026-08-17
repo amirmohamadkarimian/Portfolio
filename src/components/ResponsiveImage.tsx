@@ -8,16 +8,15 @@ interface ResponsiveImageProps {
   height?: number;
   priority?: boolean;
   lazy?: boolean;
-  quality?: "high" | "medium" | "low";
 }
 
 /**
  * ResponsiveImage Component
  * Handles WebP fallback support and responsive image loading
- * 
+ *
  * Usage:
- * <ResponsiveImage 
- *   src="image.png" 
+ * <ResponsiveImage
+ *   src="image.png"
  *   alt="Description"
  *   width={500}
  *   height={400}
@@ -32,7 +31,6 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
   height,
   priority = false,
   lazy = false,
-  quality = "high",
 }) => {
   // Generate WebP source from PNG/JPG source
   const webpSrc = src.replace(/\.(png|jpg|jpeg)$/i, ".webp");
@@ -43,7 +41,7 @@ export const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
     className,
     ...(width && { width }),
     ...(height && { height }),
-    ...(priority && { fetchpriority: "high" as const }),
+    ...(priority && { fetchPriority: "high" as const }),
     ...(lazy && { loading: "lazy" as const }),
   };
 

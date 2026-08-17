@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,13 +10,13 @@ export default defineConfig({
       output: {
         manualChunks: {
           // Vendor libraries
-          'vendor': ['react', 'react-dom'],
+          vendor: ["react", "react-dom"],
           // Below-the-fold components
-          'sections': [
-            './src/components/Blog.tsx',
-            './src/components/Contact.tsx',
-            './src/components/Experience.tsx',
-            './src/components/Skills.tsx',
+          sections: [
+            "./src/components/Blog.tsx",
+            "./src/components/Contact.tsx",
+            "./src/components/Experience.tsx",
+            "./src/components/Skills.tsx",
           ],
         },
       },

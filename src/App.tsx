@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useCallback, useRef, Suspense } from "react";
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+  Suspense,
+} from "react";
 import "./styles.css";
 
 import { Toast } from "./components/Toast";
@@ -9,13 +15,23 @@ import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 
 // Lazy load below-fold components for better initial load performance
-const Experience = React.lazy(() => import("./components/Experience").then(m => ({ default: m.Experience })));
-const Skills = React.lazy(() => import("./components/Skills").then(m => ({ default: m.Skills })));
-const Blog = React.lazy(() => import("./components/Blog").then(m => ({ default: m.Blog })));
-const Contact = React.lazy(() => import("./components/Contact").then(m => ({ default: m.Contact })));
+const Experience = React.lazy(() =>
+  import("./components/Experience").then((m) => ({ default: m.Experience })),
+);
+const Skills = React.lazy(() =>
+  import("./components/Skills").then((m) => ({ default: m.Skills })),
+);
+const Blog = React.lazy(() =>
+  import("./components/Blog").then((m) => ({ default: m.Blog })),
+);
+const Contact = React.lazy(() =>
+  import("./components/Contact").then((m) => ({ default: m.Contact })),
+);
 
 // Fallback component for lazy loaded sections
-const LazyFallback = () => <div style={{ minHeight: "400px" }} aria-busy="true" />;
+const LazyFallback = () => (
+  <div style={{ minHeight: "400px" }} aria-busy="true" />
+);
 
 export const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

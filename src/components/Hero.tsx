@@ -199,7 +199,7 @@ export const Hero: React.FC = () => {
                   className="portrait-img"
                   width="525"
                   height="399"
-                  fetchpriority="high"
+                  fetchPriority="high"
                 />
               </div>
             </div>

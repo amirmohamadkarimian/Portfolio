@@ -88,49 +88,25 @@ export const Projects: React.FC = () => {
       <div className="projects-container container">
         {/* Header Row */}
         <Reveal>
-        <div className="projects-header-row">
-          <div className="projects-header-left">
-            <h2 className="projects-title">My Latest Works</h2>
-            <p className="projects-subtitle">
-              Perfect solution for digital experience
-            </p>
-          </div>
+          <div className="projects-header-row">
+            <div className="projects-header-left">
+              <h2 className="projects-title">My Latest Works</h2>
+              <p className="projects-subtitle">
+                Perfect solution for digital experience
+              </p>
+            </div>
 
-          <div className="projects-header-right">
-            <a
-              href="https://github.com/amirmohamadkarimian?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="explore-more-link"
-            >
-              Explore More Works
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            <div className="projects-header-right">
+              <a
+                href="https://github.com/amirmohamadkarimian?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="explore-more-link"
               >
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </a>
-
-            {/* Slider Control Buttons */}
-            <div className="slider-controls">
-              <button
-                id="slider-prev-btn"
-                className="slider-arrow-btn"
-                aria-label="Previous Project"
-                disabled={prevDisabled}
-                onClick={handlePrev}
-              >
+                Explore More Works
                 <svg
-                  width="20"
-                  height="20"
+                  width="18"
+                  height="18"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -138,157 +114,181 @@ export const Projects: React.FC = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <line x1="19" y1="12" x2="5" y2="12"></line>
-                  <polyline points="12 19 5 12 12 5"></polyline>
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
-              </button>
-              <button
-                id="slider-next-btn"
-                className="slider-arrow-btn"
-                aria-label="Next Project"
-                disabled={nextDisabled}
-                onClick={handleNext}
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+              </a>
+
+              {/* Slider Control Buttons */}
+              <div className="slider-controls">
+                <button
+                  id="slider-prev-btn"
+                  className="slider-arrow-btn"
+                  aria-label="Previous Project"
+                  disabled={prevDisabled}
+                  onClick={handlePrev}
                 >
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </button>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                  </svg>
+                </button>
+                <button
+                  id="slider-next-btn"
+                  className="slider-arrow-btn"
+                  aria-label="Next Project"
+                  disabled={nextDisabled}
+                  onClick={handleNext}
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
         </Reveal>
 
         {/* Slider Carousel Stage */}
         <Reveal delay={150}>
-        <div className="projects-slider-wrapper">
-          <div
-            id="projects-slider-track"
-            className="projects-slider-track"
-            ref={trackRef}
-            onMouseDown={handleMouseDown}
-            onMouseLeave={handleMouseLeaveOrUp}
-            onMouseUp={handleMouseLeaveOrUp}
-            onMouseMove={handleMouseMove}
-          >
-            {PROJECTS_DATA.map((proj) => (
-              <article
-                key={proj.id}
-                className={`project-card ${proj.cardClass}`}
-              >
-                <div className="project-card-header">
-                  <h3 className="project-category">{proj.category}</h3>
-                  <h4 className="project-name">{proj.title}</h4>
-                </div>
-
-                {proj.image ? (
-                  <div className="project-card-media">
-                    <img
-                      src={proj.image}
-                      alt={`${proj.title} UI Mockup`}
-                      className="project-img"
-                      width="400"
-                      height="284"
-                      loading="lazy"
-                    />
+          <div className="projects-slider-wrapper">
+            <div
+              id="projects-slider-track"
+              className="projects-slider-track"
+              ref={trackRef}
+              onMouseDown={handleMouseDown}
+              onMouseLeave={handleMouseLeaveOrUp}
+              onMouseUp={handleMouseLeaveOrUp}
+              onMouseMove={handleMouseMove}
+            >
+              {PROJECTS_DATA.map((proj) => (
+                <article
+                  key={proj.id}
+                  className={`project-card ${proj.cardClass}`}
+                >
+                  <div className="project-card-header">
+                    <h3 className="project-category">{proj.category}</h3>
+                    <h4 className="project-name">{proj.title}</h4>
                   </div>
-                ) : proj.mockupType === "mint" ? (
-                  <div className="project-card-media mockup-mint-stage">
-                    <div className="ui-mockup-canvas">
-                      <div className="mockup-header-bar">
-                        <span className="dot red"></span>
-                        <span className="dot yellow"></span>
-                        <span className="dot green"></span>
-                        <span className="mockup-title-text">
-                          design-system.tokens.json
-                        </span>
-                      </div>
-                      <div className="mockup-body-content">
-                        <div className="palette-swatches">
-                          <span className="swatch sw-navy"></span>
-                          <span className="swatch sw-teal"></span>
-                          <span className="swatch sw-yellow"></span>
-                          <span className="swatch sw-coral"></span>
+
+                  {proj.image ? (
+                    <div className="project-card-media">
+                      <img
+                        src={proj.image}
+                        alt={`${proj.title} UI Mockup`}
+                        className="project-img"
+                        width="400"
+                        height="284"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : proj.mockupType === "mint" ? (
+                    <div className="project-card-media mockup-mint-stage">
+                      <div className="ui-mockup-canvas">
+                        <div className="mockup-header-bar">
+                          <span className="dot red"></span>
+                          <span className="dot yellow"></span>
+                          <span className="dot green"></span>
+                          <span className="mockup-title-text">
+                            design-system.tokens.json
+                          </span>
                         </div>
-                        <div className="mockup-component-row">
-                          <div className="mockup-btn btn-sample-primary">
-                            Primary Button
+                        <div className="mockup-body-content">
+                          <div className="palette-swatches">
+                            <span className="swatch sw-navy"></span>
+                            <span className="swatch sw-teal"></span>
+                            <span className="swatch sw-yellow"></span>
+                            <span className="swatch sw-coral"></span>
                           </div>
-                          <div className="mockup-badge-sample">
-                            Active Badge
+                          <div className="mockup-component-row">
+                            <div className="mockup-btn btn-sample-primary">
+                              Primary Button
+                            </div>
+                            <div className="mockup-badge-sample">
+                              Active Badge
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ) : proj.mockupType === "coral" ? (
-                  <div className="project-card-media mockup-coral-stage">
-                    <div className="ui-mockup-canvas">
-                      <div className="mockup-header-bar">
-                        <span className="dot red"></span>
-                        <span className="dot yellow"></span>
-                        <span className="dot green"></span>
-                        <span className="mockup-title-text">
-                          store.checkout.app
-                        </span>
-                      </div>
-                      <div className="mockup-body-content store-grid-sample">
-                        <div className="store-item-card">
-                          <div className="store-img-placeholder"></div>
-                          <div className="store-line short"></div>
-                          <div className="store-line long"></div>
+                  ) : proj.mockupType === "coral" ? (
+                    <div className="project-card-media mockup-coral-stage">
+                      <div className="ui-mockup-canvas">
+                        <div className="mockup-header-bar">
+                          <span className="dot red"></span>
+                          <span className="dot yellow"></span>
+                          <span className="dot green"></span>
+                          <span className="mockup-title-text">
+                            store.checkout.app
+                          </span>
                         </div>
-                        <div className="store-item-card">
-                          <div className="store-img-placeholder"></div>
-                          <div className="store-line short"></div>
-                          <div className="store-line long"></div>
+                        <div className="mockup-body-content store-grid-sample">
+                          <div className="store-item-card">
+                            <div className="store-img-placeholder"></div>
+                            <div className="store-line short"></div>
+                            <div className="store-line long"></div>
+                          </div>
+                          <div className="store-item-card">
+                            <div className="store-img-placeholder"></div>
+                            <div className="store-line short"></div>
+                            <div className="store-line long"></div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ) : null}
+                  ) : null}
 
-                <div className="project-card-footer">
-                  <div className="project-tags">
-                    {proj.tags.map((tag, idx) => (
-                      <span key={idx} className="project-tag-pill">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <a
-                    href="#contact"
-                    className="project-view-btn"
-                    aria-label={`View ${proj.title} details`}
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                  <div className="project-card-footer">
+                    <div className="project-tags">
+                      {proj.tags.map((tag, idx) => (
+                        <span key={idx} className="project-tag-pill">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <a
+                      href="#contact"
+                      className="project-view-btn"
+                      aria-label={`View ${proj.title} details`}
                     >
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </article>
-            ))}
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
         </Reveal>
       </div>
     </section>
