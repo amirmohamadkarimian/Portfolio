@@ -12,14 +12,14 @@
 
   --text-navy: #0f2c3a;
   --text-body: #344c57;
-  --text-muted: #647b85;
-  --text-light: #8e9fa7;
+  --text-muted: #4a5f6a;
+  --text-light: #5a7080;
 
   --accent-coral: #fd6f49;
   --accent-coral-hover: #e45530;
   --accent-coral-light: #fff0ec;
   --accent-teal: #0d7c66;
-  --accent-yellow: #f4be37;
+  --accent-yellow: #d4a929;
 
   --border-subtle: rgba(15, 44, 58, 0.12);
   --border-medium: rgba(15, 44, 58, 0.22);
@@ -501,11 +501,8 @@ button {
 @media (min-width: 1024px) {
   .hero-section {
     min-height: 100vh;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -520,7 +517,7 @@ button {
 @media (min-width: 1200px) {
   .hero-grid {
     width: 100%;
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh - 9rem);
     grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
     gap: 4rem;
     align-items: center;
