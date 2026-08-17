@@ -199,42 +199,6 @@ export const Hero: React.FC = () => {
                   className="portrait-img"
                 />
               </div>
-
-              {/* Rotating Stamp Badge */}
-              <div className="stamp-badge-wrapper">
-                <div className="stamp-badge">
-                  <svg className="stamp-text-svg" viewBox="0 0 100 100">
-                    <path
-                      id="circlePath"
-                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                      fill="none"
-                    />
-                    <text
-                      fontSize="8.3"
-                      fontWeight="700"
-                      letterSpacing="1.4"
-                      fill="#0F2C3A"
-                    >
-                      <textPath href="#circlePath">FRONTEND DEVELOPER</textPath>
-                    </text>
-                  </svg>
-                  <div className="stamp-center-icon">
-                    <svg
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#0F2C3A"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="16 18 22 12 16 6"></polyline>
-                      <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
