@@ -1513,7 +1513,7 @@ button {
 /* Card Themes from Reference */
 .card-yellow {
   background-color: rgb(145, 164, 145);
-  color: var(--text-navy);
+  color: #ffffff;
 }
 
 .card-teal {
@@ -1528,7 +1528,7 @@ button {
 
 .card-coral {
   background-color: var(--accent-coral);
-  color: #ffffff;
+  color: #f1efea;
 }
 
 .project-card-header {
@@ -1546,7 +1546,7 @@ button {
 
 .card-yellow .project-category,
 .card-yellow .project-name {
-  color: var(--text-navy);
+  color: #ffffff;
 }
 
 .card-teal .project-category,
@@ -1754,8 +1754,8 @@ button {
 }
 
 .card-yellow .project-tag-pill {
-  background: rgba(15, 44, 58, 0.1);
-  color: var(--text-navy);
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
 }
 
 .project-view-btn {
@@ -1773,8 +1773,8 @@ button {
 }
 
 .card-yellow .project-view-btn {
-  background: rgba(15, 44, 58, 0.1);
-  color: var(--text-navy);
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
 }
 
 .project-card:hover .project-view-btn {
