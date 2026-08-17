@@ -1,6 +1,6 @@
-import React from 'react';
-import { TECH_SKILLS_DATA, SOFT_SKILLS_DATA } from '../data/portfolioData';
-import { Reveal } from './Reveal';
+import React from "react";
+import { TECH_SKILLS_DATA, SOFT_SKILLS_DATA } from "../data/portfolioData";
+import { Reveal } from "./Reveal";
 
 export const Skills: React.FC = () => {
   return (
@@ -8,7 +8,9 @@ export const Skills: React.FC = () => {
       <div className="skills-container container">
         <Reveal>
           <div className="skills-header">
-            <h2 className="skills-title">Technical Proficiency & Core Strengths</h2>
+            <h2 className="skills-title">
+              Technical Proficiency & Core Strengths
+            </h2>
             <p className="skills-subtitle">
               A balanced synthesis of frontend engineering mastery and
               disciplined soft skills for building high-stakes digital products.
@@ -46,7 +48,9 @@ export const Skills: React.FC = () => {
                     <div className="tech-details">
                       <h4 className="tech-name">{tech.name}</h4>
                     </div>
-                    {tech.badgeText && <span className="tech-badge">{tech.badgeText}</span>}
+                    {tech.badgeText && (
+                      <span className="tech-badge">{tech.badgeText}</span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -84,7 +88,6 @@ export const Skills: React.FC = () => {
                       </div>
                       <h4 className="soft-title">{soft.title}</h4>
                     </div>
-                    <p className="soft-desc">{soft.description}</p>
                   </div>
                 ))}
               </div>

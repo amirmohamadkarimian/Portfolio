@@ -803,6 +803,13 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+  order: 2;
+}
+
+@media (min-width: 900px) {
+  .about-cards-col {
+    order: 1;
+  }
 }
 
 .service-card {
@@ -875,6 +882,13 @@ button {
 .about-content-col {
   display: flex;
   flex-direction: column;
+  order: 1;
+}
+
+@media (min-width: 900px) {
+  .about-content-col {
+    order: 2;
+  }
 }
 
 .about-heading {
