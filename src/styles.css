@@ -307,7 +307,8 @@ button {
   display: none;
 }
 
-@media (min-width: 900px) {
+/* Keep the compact menu until the full nav and CV action fit on one line. */
+@media (min-width: 1180px) {
   .desktop-nav {
     display: block;
   }
@@ -414,7 +415,7 @@ button {
   flex-shrink: 0;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1180px) {
   .hamburger-btn {
     display: none;
   }
