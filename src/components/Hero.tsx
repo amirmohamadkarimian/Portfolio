@@ -197,6 +197,9 @@ export const Hero: React.FC = () => {
                   src="selfie.png"
                   alt="Amirmohamad Karimian - Frontend Developer"
                   className="portrait-img"
+                  width="525"
+                  height="399"
+                  fetchpriority="high"
                 />
               </div>
             </div>

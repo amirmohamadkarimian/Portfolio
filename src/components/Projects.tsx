@@ -196,6 +196,9 @@ export const Projects: React.FC = () => {
                       src={proj.image}
                       alt={`${proj.title} UI Mockup`}
                       className="project-img"
+                      width="400"
+                      height="284"
+                      loading="lazy"
                     />
                   </div>
                 ) : proj.mockupType === "mint" ? (
