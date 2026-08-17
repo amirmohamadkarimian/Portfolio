@@ -331,16 +331,66 @@ button {
 }
 
 .nav-link .pill-wrapper {
+  display: inline-flex;
+  align-items: center;
   padding: 0.3rem 0.8rem;
-  border: 1.5px solid transparent;
-  border-radius: var(--radius-pill);
-  transition: all var(--transition-fast);
+  position: relative;
+  transition: color var(--transition-fast);
 }
 
 .nav-link:hover .pill-wrapper,
 .nav-link.active .pill-wrapper {
-  border-color: var(--text-navy);
-  color: var(--text-navy);
+  color: var(--accent-teal);
+}
+
+/* The active state uses two open, rounded brackets instead of a closed pill. */
+.nav-link .pill-wrapper::before,
+.nav-link .pill-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.7rem;
+  height: 1.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.nav-link .pill-wrapper::before {
+  left: -0.3rem;
+  border-top: 1.5px solid var(--accent-teal);
+  border-bottom: 1.5px solid var(--accent-teal);
+  border-left: 1.5px solid var(--accent-teal);
+  border-radius: 999px 0 0 999px;
+  transform: translate(-0.2rem, -50%);
+}
+
+.nav-link .pill-wrapper::after {
+  right: -0.3rem;
+  border-top: 1.5px solid var(--accent-teal);
+  border-right: 1.5px solid var(--accent-teal);
+  border-bottom: 1.5px solid var(--accent-teal);
+  border-radius: 0 999px 999px 0;
+  transform: translate(0.2rem, -50%);
+}
+
+.nav-link:hover .pill-wrapper::before,
+.nav-link.active .pill-wrapper::before,
+.nav-link:hover .pill-wrapper::after,
+.nav-link.active .pill-wrapper::after {
+  opacity: 1;
+}
+
+.nav-link:hover .pill-wrapper::before,
+.nav-link.active .pill-wrapper::before {
+  transform: translate(0, -50%);
+}
+
+.nav-link:hover .pill-wrapper::after,
+.nav-link.active .pill-wrapper::after {
+  transform: translate(0, -50%);
 }
 
 .header-actions {
