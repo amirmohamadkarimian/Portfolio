@@ -41,9 +41,8 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
     <section id="contact" className="contact-section">
       <div className="contact-container container">
         <div className="contact-top-grid">
-          {/* Left Side: CTA Heading & Information */}
+          {/* Intro */}
           <Reveal className="reveal-left">
-          <div className="contact-left-col">
             <div className="contact-cta-block">
               <h2 className="contact-heading">
                 Let’s make something amazing together.
@@ -52,66 +51,6 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
                 Have a project in mind, a question, or want to collaborate? Send me a message and I'll get back to you promptly.
               </p>
             </div>
-
-            <div className="contact-details-grid">
-              <div className="info-group">
-                <h3 className="info-title">Information</h3>
-                <p className="info-detail">Tehran, Iran</p>
-                <p className="info-email-line">
-                  <a href="mailto:karimian.dev@gmail.com" className="info-email">
-                    karimian.dev@gmail.com
-                  </a>
-                </p>
-                <p className="info-phone-line">
-                  <a href="tel:+989940478850" className="info-phone">
-                    +98 994 047 8850
-                  </a>
-                </p>
-              </div>
-
-              <div className="info-group">
-                <h3 className="info-title">Connect</h3>
-                <ul className="social-links-list">
-                  <li>
-                    <a
-                      href="https://github.com/amirmohamadkarimian"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub ↗
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/amirmohammadkarimian/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      LinkedIn ↗
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://t.me/codescoffee"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Telegram ↗
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/amirm.code/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Instagram ↗
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
           </Reveal>
 
           {/* Right Side: Contact Form */}
@@ -213,6 +152,36 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
             </div>
           </div>
           </Reveal>
+
+          {/* Keep details after the form at every viewport width. */}
+          <Reveal className="contact-details-reveal" delay={250}>
+            <div className="contact-details-grid">
+              <div className="info-group">
+                <h3 className="info-title">Information</h3>
+                <p className="info-detail">Tehran, Iran</p>
+                <p className="info-email-line">
+                  <a href="mailto:karimian.dev@gmail.com" className="info-email">
+                    karimian.dev@gmail.com
+                  </a>
+                </p>
+                <p className="info-phone-line">
+                  <a href="tel:+989940478850" className="info-phone">
+                    +98 994 047 8850
+                  </a>
+                </p>
+              </div>
+
+              <div className="info-group">
+                <h3 className="info-title">Connect</h3>
+                <ul className="social-links-list">
+                  <li><a href="https://github.com/amirmohamadkarimian" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+                  <li><a href="https://www.linkedin.com/in/amirmohammadkarimian/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+                  <li><a href="https://t.me/codescoffee" target="_blank" rel="noopener noreferrer">Telegram ↗</a></li>
+                  <li><a href="https://www.instagram.com/amirm.code/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+                </ul>
+              </div>
+            </div>
+          </Reveal>
         </div>
 
         {/* Footer Bottom Bar */}
@@ -256,4 +225,3 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
     </section>
   );
 };
-

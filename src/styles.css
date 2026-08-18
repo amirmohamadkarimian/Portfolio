@@ -2116,31 +2116,6 @@ button {
   border-bottom: 1px solid var(--border-subtle);
 }
 
-/* On phones, place the form between the intro and the contact details. */
-@media (max-width: 767px) {
-  .contact-top-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contact-top-grid > .reveal-left,
-  .contact-left-col {
-    display: contents;
-  }
-
-  .contact-cta-block {
-    order: 1;
-  }
-
-  .contact-top-grid > .reveal-right {
-    order: 2;
-  }
-
-  .contact-details-grid {
-    order: 3;
-  }
-}
-
 @media (min-width: 992px) {
   .contact-top-grid {
     grid-template-columns: 1.05fr 0.95fr;
@@ -2149,28 +2124,9 @@ button {
   }
 }
 
-.contact-left-col {
-  display: contents;
-}
-
-@media (min-width: 992px) {
-  .contact-left-col {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
 .contact-cta-block {
   display: flex;
   flex-direction: column;
-  order: 1;
-}
-
-@media (min-width: 992px) {
-  .contact-cta-block {
-    order: 0;
-  }
 }
 
 .contact-heading {
@@ -2205,6 +2161,12 @@ button {
   gap: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 992px) {
+  .contact-details-reveal {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (min-width: 550px) {
