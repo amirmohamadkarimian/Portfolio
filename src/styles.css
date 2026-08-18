@@ -2116,6 +2116,31 @@ button {
   border-bottom: 1px solid var(--border-subtle);
 }
 
+/* On phones, place the form between the intro and the contact details. */
+@media (max-width: 767px) {
+  .contact-top-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-top-grid > .reveal-left,
+  .contact-left-col {
+    display: contents;
+  }
+
+  .contact-cta-block {
+    order: 1;
+  }
+
+  .contact-top-grid > .reveal-right {
+    order: 2;
+  }
+
+  .contact-details-grid {
+    order: 3;
+  }
+}
+
 @media (min-width: 992px) {
   .contact-top-grid {
     grid-template-columns: 1.05fr 0.95fr;
