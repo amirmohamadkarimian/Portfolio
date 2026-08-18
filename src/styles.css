@@ -2461,17 +2461,6 @@ button {
   will-change: opacity, transform;
 }
 
-@media (max-width: 767px) {
-  .reveal,
-  .reveal.reveal-left,
-  .reveal.reveal-right,
-  .reveal.reveal-scale {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
 /* Visible state applied by IntersectionObserver */
 .reveal.in-view {
   opacity: 1;
