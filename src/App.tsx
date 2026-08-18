@@ -51,6 +51,29 @@ export const App: React.FC = () => {
     }, 3000);
   }, []);
 
+  // Fix reload behavior: scroll to top and reset state
+  useEffect(() => {
+    // Disable browser scroll restoration to prevent conflicts with our scroll handler
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    // Scroll to top on mount/reload
+    window.scrollTo(0, 0);
+
+    // Reset refs to initial state
+    lastScrollY.current = 0;
+    activeSectionRef.current = "hero";
+    isScrolledRef.current = false;
+    isHeaderVisibleRef.current = true;
+
+    // Reset state
+    setIsScrolled(false);
+    setIsHeaderVisible(true);
+    setActiveSection("hero");
+    setMobileMenuOpen(false);
+  }, []);
+
   useEffect(() => {
     activeSectionRef.current = activeSection;
   }, [activeSection]);
