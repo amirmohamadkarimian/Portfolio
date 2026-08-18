@@ -2164,12 +2164,36 @@ button {
 }
 
 @media (min-width: 992px) {
+  .contact-top-grid {
+    grid-template-rows: auto 1fr;
+    column-gap: 4rem;
+    row-gap: 1.5rem;
+  }
+
+  /* Keep the form as the right-hand anchor while the contact details sit
+     directly beneath the intro, making both groups visible side by side. */
+  .contact-top-grid > .reveal-right {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
   .contact-details-reveal {
-    grid-column: 1 / -1;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  /* Keep the lower contact information on the same visual columns as the
+     intro and form above it. This prevents the social links from drifting
+     left of the form on wide screens. */
+  .contact-details-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    column-gap: 4rem;
+    padding-top: 1.25rem;
   }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 550px) and (max-width: 991px) {
   .contact-details-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;

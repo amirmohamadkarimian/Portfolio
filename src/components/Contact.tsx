@@ -154,7 +154,7 @@ export const Contact: React.FC<ContactProps> = ({ onShowToast }) => {
           </Reveal>
 
           {/* Keep details after the form at every viewport width. */}
-          <Reveal className="contact-details-reveal" delay={250}>
+          <Reveal className="contact-details-reveal reveal-left" delay={150}>
             <div className="contact-details-grid">
               <div className="info-group">
                 <h3 className="info-title">Information</h3>
