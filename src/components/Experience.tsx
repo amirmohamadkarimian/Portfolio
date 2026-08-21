@@ -2,13 +2,13 @@ import React from "react";
 import { TIMELINE_DATA } from "../data/portfolioData";
 import { Reveal } from "./Reveal";
 
-export const Experience: React.FC = () => {
+export const Journey: React.FC = () => {
   return (
-    <section id="experience" className="experience-section">
-      <div className="experience-container container">
+    <section id="journey" className="journey-section experience-section">
+      <div className="journey-container experience-container container">
         <Reveal>
-          <div className="experience-header">
-            <h2 className="experience-title">My Journey</h2>
+          <div className="journey-header experience-header">
+            <h2 className="journey-title experience-title">My Journey</h2>
           </div>
         </Reveal>
 
@@ -19,7 +19,7 @@ export const Experience: React.FC = () => {
             <Reveal key={item.id} delay={i * 120}>
               <div className="timeline-item">
                 <div className="timeline-left">
-                  <h3 className="company-name">{item.company}</h3>
+                  <h3 className="timeline-stage company-name">{item.stage}</h3>
                   <span className="timeline-date">{item.date}</span>
                 </div>
 
@@ -30,7 +30,7 @@ export const Experience: React.FC = () => {
                 </div>
 
                 <div className="timeline-right">
-                  <h4 className="role-title">{item.role}</h4>
+                  <h4 className="timeline-title role-title">{item.title}</h4>
                   <p className="role-desc">{item.description}</p>
                 </div>
               </div>
@@ -41,3 +41,5 @@ export const Experience: React.FC = () => {
     </section>
   );
 };
+
+export const Experience = Journey;

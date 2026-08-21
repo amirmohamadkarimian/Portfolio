@@ -8,9 +8,9 @@ export interface ServiceCard {
 
 export interface TimelineItem {
   id: string;
-  company: string;
+  stage: string;
   date: string;
-  role: string;
+  title: string;
   description: string;
   nodeClass: string;
 }

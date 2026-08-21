@@ -56,6 +56,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -623,6 +624,7 @@ button {
 .hero-title-highlight {
   display: inline-block;
   color: var(--text-navy);
+  white-space: nowrap;
 }
 
 .hero-bio-box {
@@ -1268,13 +1270,19 @@ button {
 /* Tech Grid Cards */
 .tech-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 767px) {
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 479px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1282,8 +1290,9 @@ button {
   background: var(--bg-surface);
   border: 1px solid rgba(15, 44, 58, 0.08);
   border-radius: var(--radius-md);
-  padding: 1.2rem 1.2rem;
+  padding: 1rem 1.1rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.85rem;
   box-shadow: 0 4px 15px rgba(15, 44, 58, 0.03);
@@ -1301,9 +1310,9 @@ button {
 }
 
 .tech-icon-wrapper {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1327,6 +1336,44 @@ button {
   color: var(--text-navy);
 }
 
+/* Per-technology icon backgrounds */
+.icon-html-bg {
+  background: rgba(227, 79, 38, 0.1);
+}
+.icon-css-bg {
+  background: rgba(38, 77, 228, 0.1);
+}
+.icon-js-bg {
+  background: rgba(247, 223, 30, 0.18);
+}
+.icon-tailwind-bg {
+  background: rgba(56, 189, 248, 0.12);
+}
+.icon-redux-bg {
+  background: rgba(118, 74, 188, 0.12);
+}
+.icon-ts-bg {
+  background: rgba(49, 120, 198, 0.12);
+}
+.icon-npm-bg {
+  background: rgba(203, 56, 55, 0.1);
+}
+.icon-api-bg {
+  background: rgba(13, 124, 102, 0.1);
+}
+.icon-react-bg {
+  background: rgba(0, 216, 255, 0.1);
+}
+.icon-git-bg {
+  background: rgba(240, 80, 50, 0.1);
+}
+.icon-github-bg {
+  background: rgba(27, 31, 35, 0.08);
+}
+.icon-vite-bg {
+  background: rgba(189, 52, 254, 0.08);
+}
+
 .tech-details {
   display: flex;
   flex-direction: column;
@@ -1337,7 +1384,7 @@ button {
 
 .tech-name {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--text-navy);
   line-height: 1.3;
@@ -1368,7 +1415,7 @@ button {
   background: var(--bg-surface);
   border: 1px solid rgba(15, 44, 58, 0.08);
   border-radius: var(--radius-md);
-  padding: 1.4rem 1.6rem;
+  padding: 1rem 1.1rem;
   box-shadow: 0 4px 15px rgba(15, 44, 58, 0.03);
   transition:
     transform var(--transition-fast),
@@ -1385,13 +1432,13 @@ button {
 .soft-header {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 0.6rem;
+  gap: 0.65rem;
+  margin-bottom: 0;
 }
 
 .soft-icon {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1418,9 +1465,10 @@ button {
 
 .soft-title {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--text-navy);
+  line-height: 1.3;
 }
 
 .soft-desc {

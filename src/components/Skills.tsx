@@ -48,9 +48,6 @@ export const Skills: React.FC = () => {
                     <div className="tech-details">
                       <h4 className="tech-name">{tech.name}</h4>
                     </div>
-                    {tech.badgeText && (
-                      <span className="tech-badge">{tech.badgeText}</span>
-                    )}
                   </div>
                 ))}
               </div>
@@ -76,7 +73,7 @@ export const Skills: React.FC = () => {
                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
-                Professional Soft Skills
+                Soft Skills
               </h3>
 
               <div className="soft-skills-grid">
