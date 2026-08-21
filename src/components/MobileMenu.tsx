@@ -10,6 +10,7 @@ const MOBILE_NAV_LINKS = [
   { id: 'hero', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
+  { id: 'journey', label: 'Journey' },
   { id: 'projects', label: 'Projects' },
   { id: 'blog', label: 'Blog' },
   { id: 'contact', label: 'Contact' },

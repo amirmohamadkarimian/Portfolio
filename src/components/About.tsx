@@ -55,7 +55,7 @@ export const About: React.FC = () => {
             <Reveal delay={300}>
               <div className="about-stats-row">
                 <div className="stat-item">
-                  <div className="stat-number">8+</div>
+                  <div className="stat-number">10+</div>
                   <div className="stat-label">Project Completed</div>
                 </div>
 

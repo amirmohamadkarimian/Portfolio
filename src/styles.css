@@ -222,6 +222,12 @@ button {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   flex-shrink: 0;
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 @media (min-width: 600px) {
@@ -240,10 +246,12 @@ button {
 
 .btn-cv-download .icon-dl {
   transition: transform var(--transition-fast);
+  vertical-align: middle;
+  margin-bottom: 3px;
 }
 
 .btn-cv-download:hover .icon-dl {
-  transform: translateY(2px);
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
